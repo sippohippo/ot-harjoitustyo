@@ -1,0 +1,132 @@
+(base) sippo@Sippos-MacBook-Air ot_viikko1 % git log --stat | cat
+commit d2801839972262e361765bce620a2feb5ee9cf77
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 16:02:46 2023 +0100
+
+    lisataan file22
+
+ tiedostoja/file22 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit baa6d89a03cbc0ca671156ac2f61b45b5af26688
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 16:01:37 2023 +0100
+
+    file2 uudelleennimetty file22
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9e63655a7455ca6fdd5a9c0a9d692955e25bc663
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 15:57:29 2023 +0100
+
+    uusi hakemisto tiedostoille
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 99d9ca7ed46eb2445674756ff6c9638f03c2b07c
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 13:38:07 2023 +0100
+
+    muutokset txt tiedostoihin
+
+ eka.txt    | 8 ++++++--
+ kolmas.txt | 4 +++-
+ 2 files changed, 9 insertions(+), 3 deletions(-)
+
+commit cc558cf994b77800af2e97e3eaf411a714b9133c
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 13:31:18 2023 +0100
+
+    poistettu vanhalla nimell oleva tiedosto
+
+ tiedosto.txt | 57 ---------------------------------------------------------
+ 1 file changed, 57 deletions(-)
+
+commit 9c539592cf42928fa9c60da0d62470a4377de775
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 13:30:28 2023 +0100
+
+    uudellennimetty
+
+ eka.txt | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+
+commit d35b2dc6949cabd800da86a5972bd11cbec45c7e
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 13:28:27 2023 +0100
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 7b837ae1de150fbd300155f9d7de66367e989108
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 13:07:26 2023 +0100
+
+    muutettu tekstia
+
+ tiedosto.txt | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit 72d45c8fe174d95f09e5f59d7dad645185cb3010
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 13:04:15 2023 +0100
+
+    lorem ipsumit lisatty
+
+ tiedosto.txt | 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 56 insertions(+)
+
+commit 4c292c3022d68a8354d5b2bf9383159446fd58d3
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 12:45:08 2023 +0100
+
+    lisatty hakemisto
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bc8193d5ff4b53e2c89ec4b7bdc89fa0abdd1c63
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 12:43:57 2023 +0100
+
+    toinen ja kolmas txt muutettu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 4b9f97386d5f8e238b45ce4efa9d1b69818290e5
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 12:42:40 2023 +0100
+
+    kolmas lisatty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f6a70c85b998597c3f32b2f54b07c052084d8b50
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 12:29:21 2023 +0100
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 48f65edc383a526045157ed05b2c2646c203c852
+Author: sippohippo <sippo-2@hotmail.com>
+Date:   Sun Mar 19 12:26:49 2023 +0100
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
