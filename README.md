@@ -10,6 +10,10 @@
 [komentorivi.txt](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 
+### Viikko 2
+
+To be added...
+
 ## What is this?
 
 This is a repository for my submissions in the HY course *Ohjelmistotekniikka* (**2023 spring edition**)
