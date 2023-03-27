@@ -12,7 +12,18 @@
 
 ### Viikko 2
 
-To be added...
+#### Laskarit
+
+
+
+#### Projekti
+
+[vaatimusmäärittely.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+
+## Työaikakirjanpito
+
+[timesheet.md](https://github.com/sippohippo/ot-harjoitustyo/tree/master/dokumentaatio)
 
 ## What is this?
 
