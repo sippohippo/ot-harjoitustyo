@@ -14,7 +14,9 @@
 
 #### Laskarit
 
+[kassapaate_test.py](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko2/unicafe/src/tests/kassapaate_test.py)
 
+[testikattavuusraportti_screenshot](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko2/coveragereport_screenshot.png)
 
 #### Projekti
 
