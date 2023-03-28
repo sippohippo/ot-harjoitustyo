@@ -23,7 +23,7 @@
 
 ## Työaikakirjanpito
 
-[timesheet.md](https://github.com/sippohippo/ot-harjoitustyo/tree/master/dokumentaatio)
+[timesheet.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/timesheet.md)
 
 ## What is this?
 
