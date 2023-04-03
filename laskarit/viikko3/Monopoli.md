@@ -1,6 +1,5 @@
 ```mermaid
 
-
 classDiagram
     Lauta "1" --> "40" Ruutu
     Lauta "1" --> "2..8" Pelaaja
@@ -12,7 +11,7 @@ classDiagram
 
     class Pelaaja{
       Pelinappula
-      Ruutu
+      Nykyinen_ruutu
       Raha
     }
 
@@ -20,7 +19,7 @@ classDiagram
      Ruudun_numero
      Ruudun_tyyppi
      Ruudun_nimi
-     Seuraavan_ruutu
+     Seuraava_ruutu
      Ruudun_toiminto
      Ruudun_omistaja
      Ruudun_rakennukset
