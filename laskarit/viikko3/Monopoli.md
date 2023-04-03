@@ -1,3 +1,6 @@
+```mermaid
+
+
 classDiagram
     Lauta "1" --> "40" Ruutu
     Lauta "1" --> "2..8" Pelaaja
@@ -33,3 +36,5 @@ classDiagram
 
     class Kortti{
     }
+
+```
