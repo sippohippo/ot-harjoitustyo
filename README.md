@@ -29,9 +29,9 @@
 
 [Monopoli.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Monopoli.md)
 
-[Tehtävä 2: Sekvenssikaavio1](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/sekvenssikaavio1.png)
+[Sekvenssikaavio1](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Sekvenssikaavio1.png)
 
-[Tehtava 3: Sekvenssikaavio2](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/sekvenssikaavio2.png)
+[Sekvenssikaavio2](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Sekvenssikaavio2.png)
 
 #### Projekti
 
