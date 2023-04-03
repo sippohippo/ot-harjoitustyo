@@ -23,6 +23,19 @@
 [vaatimusmäärittely.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 
+### Viikko 3
+
+#### Laskarit
+
+[Monopoli.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Monopoli.md)
+
+[Tehtävä 2: Sekvenssikaavio1](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/sekvenssikaavio1.png)
+
+[Tehtava 3: Sekvenssikaavio2](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/sekvenssikaavio2.png)
+
+#### Projekti
+
+
 ## Työaikakirjanpito
 
 [timesheet.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/timesheet.md)
