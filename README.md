@@ -7,8 +7,10 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 ## Documentation
 
-[Software Requirements specification](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Software requirements specification](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 [Timesheet](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/timesheet.md)
+
 [Changelog](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
 ## Installation and running the program
