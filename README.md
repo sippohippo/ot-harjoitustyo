@@ -26,7 +26,7 @@ To be added.
 poetry run invoke test
 ```
 
-## Generate a test coverage report
+### Generate a test coverage report
 
 ```bash
 poetry run invoke coverage-report

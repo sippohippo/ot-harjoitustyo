@@ -1,6 +1,13 @@
 
 from invoke import task
 
+# tests
+
+@task
+def test(ctx):
+	ctx.run("pytest src", pty=True)
+
+
 # Run tests and get coverage
 
 @task
