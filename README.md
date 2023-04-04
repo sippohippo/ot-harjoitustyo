@@ -15,8 +15,25 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 ## Installation and running the program
 
-To be added.
+1. Clone this repository 
 
+```bash
+git clone https://github.com/sippohippo/ot-harjoitustyo
+```
+
+2. Go to the new cloned directory
+
+```bash
+cd ot-harjoitustyo
+```
+
+3. Install dependencies
+
+```bash
+poetry install
+```
+
+4. More steps to be added...
 
 ## Command line functionalities
 

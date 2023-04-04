@@ -1,7 +1,15 @@
 
 from invoke import task
 
-# tests
+
+# start, this is still a placeholder
+
+@task
+def start(ctx):
+    ctx.run("python3 src/main.py", pty=True)
+
+
+# testing
 
 @task
 def test(ctx):
