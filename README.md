@@ -1,48 +1,39 @@
 
-# Ohjelmistotekniikka-repo
+# Gym Training App (Ohjelmistotekniikka-repo)
 
-## Tehtävät
-
-### Viikko 1
-
-[gitlog.txt](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-[komentorivi.txt](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+The primary purpose of this app is to allow a user to record what exercises they have done at a gym and to track how they have developed overtime in terms of the weights and repetitions. No ads, no unnecessary features, just a pure elegant and functional gym diary. 
 
 
-### Viikko 2
 
-#### Laskarit
+## Documentation
 
-[kassapaate_test.py](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko2/unicafe/src/tests/kassapaate_test.py)
+[Software Requirements specification](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Timesheet](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/timesheet.md)
+[Changelog](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-[testikattavuusraportti_screenshot](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko2/coveragereport_screenshot.png)
+## Installation and running the program
 
-#### Projekti
-
-[vaatimusmäärittely.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-
-
-### Viikko 3
-
-#### Laskarit
-
-[Monopoli.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Monopoli.md)
-
-[Sekvenssikaavio1](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Sekvenssikaavio1.png)
-
-[Sekvenssikaavio2](https://github.com/sippohippo/ot-harjoitustyo/blob/master/laskarit/viikko3/Sekvenssikaavio2.png)
-
-#### Projekti
+To be added.
 
 
-## Työaikakirjanpito
+## Command line functionalities
 
-[timesheet.md](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/timesheet.md)
+### Run tests
+
+```bash
+poetry run invoke test
+```
+
+## Generate a test coverage report
+
+```bash
+poetry run invoke coverage-report
+```
+
 
 ## What is this?
 
-This is a repository for my submissions in the HY course *Ohjelmistotekniikka* (**2023 spring edition**)
+This is a repository for my submissions in the University of Helsinki course *Ohjelmistotekniikka / Software Development)* (**2023 spring edition**)
 
 You can find the course materials [here](https://ohjelmistotekniikka-hy.github.io). 
 
