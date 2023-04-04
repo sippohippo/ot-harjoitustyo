@@ -1,7 +1,10 @@
 
 def main():
-	pass
-
+	
+	print()
+	print("Imagine a cool UI here :)")
+	print()
+	
 	# placeholder for future UI 
 
 if __name__ == "__main__":

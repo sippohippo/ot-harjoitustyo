@@ -37,6 +37,14 @@ poetry install
 
 ## Command line functionalities
 
+### Start the program
+
+Note, while this runs, it is still more of a placeholder until the UI and program logic's first version is completed.
+
+```bash
+poetry run invoke start
+```
+
 ### Run tests
 
 ```bash
