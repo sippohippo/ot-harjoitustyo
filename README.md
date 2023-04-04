@@ -21,7 +21,7 @@ The primary purpose of this app is to allow a user to record what exercises they
 git clone https://github.com/sippohippo/ot-harjoitustyo
 ```
 
-2. Go to the new cloned directory
+2. Go to the newly created directory
 
 ```bash
 cd ot-harjoitustyo
@@ -39,7 +39,7 @@ poetry install
 
 ### Start the program
 
-Note, while this runs, it is still more of a placeholder until the UI and program logic's first version is completed.
+Note! While this runs, it is still more of a placeholder until the UI and program logic's first versions are completed.
 
 ```bash
 poetry run invoke start
