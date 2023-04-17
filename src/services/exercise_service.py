@@ -1,4 +1,5 @@
 
+from datetime import date
 from entities.exercise import Exercise
 from entities.regular_user import RegularUser
 
@@ -9,14 +10,14 @@ class ExerciseService:
     # Exercise services
 
     def create_exercise(
-        self,
-        exercise_type: str,
-        set_number: int,
-        repetitions: int,
-        weight: float = None,
-        date=date.today(),
-        user=None,
-        id=None):
+            self,
+            exercise_type: str,
+            set_number: int,
+            repetitions: int,
+            weight: float = None,
+            date_of_exercise=date.today(),
+            user=None,
+            ):
 
         pass
 

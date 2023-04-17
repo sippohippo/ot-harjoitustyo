@@ -6,7 +6,8 @@
 | 4.4.2023  | 2                | Setup and building basic classes           |
 | 4.4.2023  | 1.5              | Setup of tests, invoke and rewriting docs  |
 | 4.4.2023  | 1.5              | Debugging to get it to run on Cubbli Linux |
+| 17.4.2023 | 3                | Setting up pylint and removing issues      |
+| 17.4.2023 | 1.5              | Adding first version of database and setup |
 |           |                  |                                            |
 |           |                  |                                            |
-|           |                  |                                            |
-| **Total** | 1.25             |                                            |
+| **Total** | 10.75            |                                            |

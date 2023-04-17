@@ -4,8 +4,8 @@ import sqlite3
 database = sqlite3.connect("exercise_app_database.db")
 cursor = database.cursor()
 
-def database_setup():
 
+def database_setup():
     '''
     This function contains the coded needed to initializes the database 
     '''
@@ -38,6 +38,7 @@ def database_setup():
     """)
 
     database.commit()
+
 
 if __name__ == "__main__":
     database_setup()

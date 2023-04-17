@@ -22,11 +22,9 @@ class Exercise:
         set_number: int,
         repetitions: int,
         weight: float = None,
-        date=date.today(),
+        date_of_exercise=date.today(),
         user=None,
-        id=None
-        ):
-
+    ):
         '''Constructor
 
         Args:
@@ -45,9 +43,9 @@ class Exercise:
         self.set_number = set_number
         self.repetitions = repetitions
         self.weight = weight
-        self.date = date
+        self.date_of_exercise = date
         self.user = user
-        self.id = f"{date}-{exercise_type}-{set_number}"
+        self.id = f"{date_of_exercise}-{exercise_type}-{set_number}"
 
     def __str__(self):
         return self.id

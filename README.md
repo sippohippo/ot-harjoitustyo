@@ -57,6 +57,11 @@ poetry run invoke test
 poetry run invoke coverage-report
 ```
 
+### Check that the code follows the format specified with Pylint
+
+```bash
+poetry run invoke lint
+```
 
 ## What is this?
 
