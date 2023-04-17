@@ -1,31 +1,38 @@
 
 from entities.exercise import Exercise
-from entities.regular_user import Regular_user
+from entities.regular_user import RegularUser
 
 
 class ExerciseService:
-	'''Class for the application logic'''
+    '''Class for the application logic'''
 
+    # Exercise services
 
-	# Exercise services
+    def create_exercise(
+        self,
+        exercise_type: str,
+        set_number: int,
+        repetitions: int,
+        weight: float = None,
+        date=date.today(),
+        user=None,
+        id=None):
 
-	def create_exercise(exercise_type: str, set_number: int, repetitions: int, weight: float=None, date=date.today(), user=None, id=None):
-		pass
+        pass
 
-	def get_exercises(self):
-		pass
+    def get_exercises(self):
+        pass
 
-	def edit_exercise(self):
-		pass
+    def edit_exercise(self):
+        pass
 
+    # User services
 
-	# User services
+    def new_user(self, username, password):
+        pass
 
-	def new_user(self, username, password):
-		pass
+    def login(self, username, password):
+        pass
 
-	def login(self, username, password):
-		pass
-
-	def logout(self):
-		pass
+    def logout(self):
+        pass
