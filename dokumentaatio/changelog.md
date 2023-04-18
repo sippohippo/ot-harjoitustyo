@@ -15,3 +15,4 @@
 - Added script for interacting with the database
 - Updated program logic
 - Added first rough text-UI
+- Added architecture schematics

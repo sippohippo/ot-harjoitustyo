@@ -12,5 +12,7 @@
 | 17.4.2023 | 1.5              | Adding first version of database and setup |
 | 17.4.2023 | 2                | Building database tools 				    |
 | 18.4.2023 | 3                | Debugging, first UI                        |
+| 18.4.2023 | 1                | Creted package diagram and class diagram   |
+| 18.4.2023 | 1                | Debugging to get it to run on Cubbli Linux |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 14.75            |                                            |
+| **Total** | 16.75            |                                            |

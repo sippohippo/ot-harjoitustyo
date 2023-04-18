@@ -6,7 +6,7 @@
 
 ## Application logic
 
-The main two classes of the app are RegularUser that represent the users who record exercises and Exercise, which represents the completec exercises during a visit to the gym
+The main two classes of the app are RegularUser that represent the users who record exercises and Exercise, which represents the completed exercises during a visit to the gym.
 
 ```mermaid
  classDiagram
