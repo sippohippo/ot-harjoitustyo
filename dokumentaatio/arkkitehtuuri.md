@@ -2,7 +2,7 @@
 
 ## Package diagram
 
-[Package diagram](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/packagediagram.png)
+![Package diagram](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/packagediagram.png)
 
 ## Application logic
 
