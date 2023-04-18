@@ -8,13 +8,11 @@ from invoke import task
 def start(ctx):
     ctx.run("python3 src/main.py", pty=True)
 
-
 # testing
 
 @task
 def test(ctx):
 	ctx.run("pytest src", pty=True)
-
 
 # Run tests and get coverage
 
@@ -39,3 +37,9 @@ def format(ctx):
 @task
 def lint(ctx):
 	ctx.run("pylint src")
+
+# Initialize database
+
+@task
+def build(ctx):
+	ctx.run("python3 src/database.py")

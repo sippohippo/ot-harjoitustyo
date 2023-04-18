@@ -18,7 +18,7 @@ These functionalities will be implemented as early as possible during the develo
 
 ### Creating a new user or logging in
 
-1. At the beginning there is a choice of either logging in with an existing profile or creating a new one
+1. At the beginning there is a choice of either logging in with an existing profile or creating a new one (**Partially complete**)
 2. The user can create a new profile
 	* The user must choose a username that is at least 4 characters long
 	* The program checks that the username is available

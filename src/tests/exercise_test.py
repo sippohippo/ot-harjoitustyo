@@ -15,3 +15,15 @@ class TestExercise(unittest.TestCase):
         date_for_test = date.today()
 
         self.assertEqual(exercise_str, f"{date_for_test}-Barbell Curl-1")
+
+
+class TestRegularUser(unittest.TestCase):
+    def setUp(self):
+        print("")
+
+    def test_regular_user_attributes_work(self):
+
+        test_user = RegularUser("Hippo", "salari123")
+
+        self.assertEqual(
+            (test_user.username, test_user.password), ("Hippo", "salari123"))

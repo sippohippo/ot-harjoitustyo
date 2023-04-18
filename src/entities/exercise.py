@@ -6,13 +6,13 @@ class Exercise:
 
     Attributes:
 
-    exercise_type:	string, name of exercise (e.g pushup)
-    set_number:		int, number of the set, e.g. 1 (out of 3 if doing a set of 3)
-    repetitions:	int, number of times the move was repeated (e.g. 10 pushups)
-    weight:			float, optional, when using equipment with specific weights
-    date:			datetetime.date (year, month, day), defaults to date.today()
-    user:			the regular_user who the exercise belongs to
-    id:				unique id used for retrieving individual exercises later
+    exercise_type:	   string, name of exercise (e.g pushup)
+    set_number:        int, number of the set, e.g. 1 (out of 3 if doing a set of 3)
+    repetitions:	   int, number of times the move was repeated (e.g. 10 pushups)
+    weight:			   float, optional, when using equipment with specific weights
+    date_of_exercise:  datetetime.date (year, month, day), defaults to date.today()
+    user:			   the regular_user who the exercise belongs to
+    id:			       unique id used for retrieving individual exercises later
 
     '''
 
@@ -29,13 +29,12 @@ class Exercise:
 
         Args:
 
-        exercise_type:	string
-        repetitions:	int
-        set_number:		int
-        weight:			float (optional), defaultsto None
-        date:			datetetime.date, defaults to date.today()
-        user:			User class object, optional, defaults to None
-        id:				string formed from other attributes
+        exercise_type:	    string
+        repetitions:	    int
+        set_number:	    	int
+        weight:			    float (optional), defaultsto None
+        date_of_exercise:	datetetime.date, defaults to date.today()
+        user:		     	User class object, optional, defaults to None
 
         '''
 

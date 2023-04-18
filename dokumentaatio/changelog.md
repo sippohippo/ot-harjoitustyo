@@ -10,5 +10,8 @@
 ## Week 4
 
 - Renamed Regular_user to RegularUser
-- Added pylint to the project and fixed style such as indents to spaces
+- Added pylint to the project and fixed style issues such as indents vs spaces
 - First version of database and script for initializing database added
+- Added script for interacting with the database
+- Updated program logic
+- Added first rough text-UI

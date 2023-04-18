@@ -40,5 +40,11 @@ def database_setup():
     database.commit()
 
 
+# Provide the connection to the database to all other scripts
+
+def db_connection():
+    return database
+
+
 if __name__ == "__main__":
     database_setup()

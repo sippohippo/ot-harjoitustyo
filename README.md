@@ -13,7 +13,9 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 [Changelog](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
 
-## Installation and running the program
+[Architecture](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+## Installation and setup
 
 1. Clone this repository 
 
@@ -33,17 +35,21 @@ cd ot-harjoitustyo
 poetry install
 ```
 
-4. More steps to be added...
+4. Initialize the database
 
-## Command line functionalities
+```bash
+poetry run invoke build
+```
 
-### Start the program
+5. Start the program
 
 Note! While this runs, it is still more of a placeholder until the UI and program logic's first versions are completed.
 
 ```bash
 poetry run invoke start
 ```
+
+## Other command line functionalities
 
 ### Run tests
 

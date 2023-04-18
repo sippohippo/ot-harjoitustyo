@@ -1,11 +1,10 @@
+from ui.ui import GymApplication
+
 
 def main():
 
-    print()
-    print("Imagine a cool UI here :)")
-    print()
-
-    # placeholder for future UI
+    application = GymApplication()
+    application.execute()
 
 
 if __name__ == "__main__":
