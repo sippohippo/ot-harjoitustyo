@@ -6,7 +6,10 @@ class GymApplication:
         self.__ExerciseService = ExerciseService()
 
     def login_instructions(self):
-        print("Available commands:")
+        print("")
+        print("Welcome to the gym training app")
+        print(32*"-")
+        print("Please select one:")
         print("1 login to existing user")
         print("2 create new user")
         print("3 quit")
