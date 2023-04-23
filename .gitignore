@@ -4,3 +4,6 @@ __pycache__
 htmlcov
 .DS_Store
 exercise_app_database.db
+exercise_app_database.db-journal
+database-tests.ipynb
+.ipynb_checkpoints/database-tests-checkpoint.ipynb

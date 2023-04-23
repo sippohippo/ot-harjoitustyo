@@ -15,4 +15,8 @@
 | 18.4.2023 | 1                | Creted package diagram and class diagram   |
 | 18.4.2023 | 1                | Minor additions to functionality and tests |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 16.75            |                                            |
+| 23.4.2023 | 2                | Making database queries and integrating    |
+| 23.4.2023 | 2.25             | Building services and database tools       |
+| 23.4.2023 | 1                | Building ui                                |
+|-----------|------------------|--------------------------------------------|
+| **Total** | 22               |                                            |

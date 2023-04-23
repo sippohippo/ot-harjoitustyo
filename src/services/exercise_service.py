@@ -1,15 +1,15 @@
-
 from datetime import date
 from entities.exercise import Exercise
 from entities.regular_user import RegularUser
-from database import db_connection
+from database_tools import db_tools
 
 
 class ExerciseService:
     '''Class for the application logic'''
 
-    def __init__(self):
-        self._data = db_connection()
+    def __init__(self, data=db_tools):
+        self._data = data
+        self._user = None
 
     # Exercise services
 
@@ -34,10 +34,26 @@ class ExerciseService:
     # User services
 
     def new_user(self, username, password):
-        pass
+        self._data.add_user(username, password)
 
     def login(self, username, password):
-        user = self._data.return_user(username)
+        credentials = self._data.return_user(username)
+
+        if credentials == (username, password):
+            self._user = RegularUser(username, password)
+        else:
+            print("Invalid username or password")
+
+    def delete_user(self, username, password):   
+        credentials = self._data.return_user(username)
+
+        if credentials == (username, password):
+            self._data.remove_user(username)
+        else:
+            print("Invalid password")   
 
     def logout(self):
         pass
+
+
+exercise_service = ExerciseService(db_tools)
