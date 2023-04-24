@@ -20,7 +20,7 @@ These functionalities will be implemented as early as possible during the develo
 
 1. At the beginning there is a choice of either logging in with an existing profile or creating a new one (**Completed**)
 2. The user can create a new profile (**Completed**)
-	* The user must choose a username that is at least 4 characters long
+	* The user must choose a username that is at least 4 characters long (**Completed**)
 	* The program checks that the username is available (**Completed**)
 	* The user must choose a password that is at least 4 characters long (**Completed**)
 3. The user can log in using an existing profile (**Completed**)
@@ -32,7 +32,7 @@ These functionalities will be implemented as early as possible during the develo
 1. The user can choose to add the data from a completed exercise (**Completed**)
 	* The user adds the date, exercise type, weight and number of repetitions (**Completed**)
 		* The program checks for mistakes and does not input them if they are bad (e.g. repetition not whole number, weight not int/float)
-2. The user can review previous exercises by date
+2. The user can review previous exercises by date (**Completed**)
 	* The user can edit exercises to correct mistakes
 	* The user can remove exercises
 3. The user can remove the profile

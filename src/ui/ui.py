@@ -59,6 +59,8 @@ class GymApplication:
 
         if command == str(4):
             self._logout()
+        elif command == str(2):
+            self._view_exercises()
         elif command == str(1):
             self._add_exercise()
         else:
@@ -120,6 +122,7 @@ class GymApplication:
         confirmation = input("Confirm logout by typing y and pressing enter: ")
         if confirmation == "y":
             self._NotLoggedIn = True
+            exercise_service.logout()
 
     def _add_exercise(self):
         print("")
@@ -149,3 +152,6 @@ class GymApplication:
             print("")
             print("Invalid input, please try again")
             print("")
+
+    def _view_exercises(self):
+        pass

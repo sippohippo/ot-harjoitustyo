@@ -29,7 +29,12 @@ class ExerciseService:
         return bool(exercise_added)
 
     def get_exercises(self):
-        pass
+        exercises = self._data.return_exercises(self._user.username)
+        return exercises
+
+    def get_exercises_by_date(self, date):
+        exercises = self._data.return_exercises_by_date(self._user.username, date)
+        return exercises
 
     def edit_exercise(self):
         pass
@@ -57,7 +62,6 @@ class ExerciseService:
         return False
 
     def logout(self):
-        pass
-
+        self._user = None
 
 exercise_service = ExerciseService(db_tools)

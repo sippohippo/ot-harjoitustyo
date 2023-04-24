@@ -49,11 +49,18 @@ class DatabaseTools:
         except UnableToAddExercise:
             return False
 
-    def return_exercises(self):
-        pass
+    def return_exercises(self, username):
+        cur = self._data.cursor()
+        query_result = cur.execute(
+            "SELECT * FROM exercises WHERE exercise_username=?", [username]).fetchone()
+        return query_result
 
-    def return_exercise(self):
-        pass
+    def return_exercises_by_date(self, username, date):
+        cur = self._data.cursor()
+        query_result = cur.execute(
+            "SELECT * FROM exercises WHERE exercise_username=? AND date_of_exercise=?", [
+            username, date]).fetchone()
+        return query_result
 
     def update_exercise(self):
         pass

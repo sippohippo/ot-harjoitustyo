@@ -21,6 +21,8 @@
 
 - Updated program logic and database tools
 - Removed all printing outside of UI
-- Creating new accounts and logging in now works as intended
+- Creating new accounts and logging in and out now works as intended
 - First version of main logged in UI created
 - Removed use of date module and replaced with str
+- Added the ability to add exercises
+- Added the ability to view exercises (all or filtering by date)
