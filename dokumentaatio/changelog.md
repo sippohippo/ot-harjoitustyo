@@ -16,3 +16,10 @@
 - Updated program logic
 - Added first rough text-UI
 - Added architecture schematics
+
+## Week 5
+
+- Updated program logic and database tools
+- Removed all printing outside of UI
+- Creating new accounts and logging in now works as intended
+- First version of main logged in UI created

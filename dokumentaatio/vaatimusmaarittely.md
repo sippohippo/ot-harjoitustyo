@@ -18,14 +18,14 @@ These functionalities will be implemented as early as possible during the develo
 
 ### Creating a new user or logging in
 
-1. At the beginning there is a choice of either logging in with an existing profile or creating a new one (**Partially complete**)
-2. The user can create a new profile
+1. At the beginning there is a choice of either logging in with an existing profile or creating a new one (**Completed**)
+2. The user can create a new profile (**Completed**)
 	* The user must choose a username that is at least 4 characters long
-	* The program checks that the username is available
-	* The user must choose a password that is at least 4 characters long
-3. The user can log in using an existing profile
-	* The program checks that the username and password match
-	* The program gives an error message if the credentials are faulty (username is not registered or password is wrong)
+	* The program checks that the username is available (**Completed**)
+	* The user must choose a password that is at least 4 characters long (**Completed**)
+3. The user can log in using an existing profile (**Completed**)
+	* The program checks that the username and password match (**Completed**)
+	* The program gives an error message if the credentials are faulty (username is not registered or password is wrong) (**Completed**)
 
 ### Using the app as a regular user after logging in
 

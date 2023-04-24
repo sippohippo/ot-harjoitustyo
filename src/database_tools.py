@@ -24,14 +24,13 @@ class DatabaseTools:
 
     def add_user(self, username, password):
         cur = self._data.cursor()
-        try: 
-            cur.execute("INSERT INTO users (username,password) VALUES (?,?)", [username, password])
+        try:
+            cur.execute("INSERT INTO users (username,password) VALUES (?,?)", [
+                        username, password])
             self._data.commit()
+            return True
         except:
-            print("Username already taken. Please choose another one!")
-        else:
-            print("New user created")
-        
+            return False
 
     def return_user(self, username):
         cur = self._data.cursor()

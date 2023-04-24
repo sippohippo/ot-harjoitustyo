@@ -17,6 +17,8 @@
 |-----------|------------------|--------------------------------------------|
 | 23.4.2023 | 2                | Making database queries and integrating    |
 | 23.4.2023 | 2.25             | Building services and database tools       |
-| 23.4.2023 | 1                | Building ui                                |
+| 23.4.2023 | 2                | Building ui                                |
+| 24.4.2023 | 2                | Building ui, debugging services            |
+
 |-----------|------------------|--------------------------------------------|
-| **Total** | 22               |                                            |
+| **Total** | 25               |                                            |

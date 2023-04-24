@@ -34,23 +34,26 @@ class ExerciseService:
     # User services
 
     def new_user(self, username, password):
-        self._data.add_user(username, password)
+        new_user_created = self._data.add_user(username, password)
+        return bool(new_user_created)
 
     def login(self, username, password):
         credentials = self._data.return_user(username)
 
         if credentials == (username, password):
             self._user = RegularUser(username, password)
-        else:
-            print("Invalid username or password")
+            return True
+        return False
 
-    def delete_user(self, username, password):   
+    def delete_user(self, username, password):
         credentials = self._data.return_user(username)
 
         if credentials == (username, password):
             self._data.remove_user(username)
-        else:
-            print("Invalid password")   
+            return True
+        return False
+
+        #   print("Invalid password")
 
     def logout(self):
         pass
