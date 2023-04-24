@@ -1,4 +1,3 @@
-from datetime import date
 from entities.exercise import Exercise
 from entities.regular_user import RegularUser
 from database_tools import db_tools
@@ -18,12 +17,24 @@ class ExerciseService:
         exercise_type: str,
         set_number: int,
         repetitions: int,
-        weight: float = None,
-        date_of_exercise=date.today(),
-        user=None,
+        weight: None,
+        date_of_exercise: str
     ):
+        exercise = Exercise(
+            exercise_type, set_number, repetitions, weight, date_of_exercise,
+            user=self._user.username)
 
-        pass
+        exercise_added = self._data.add_exercise(
+            exercise.id,
+            exercise.exercise_type,
+            exercise.set_number,
+            exercise.repetitions,
+            exercise.weight,
+            exercise.date_of_exercise,
+            exercise.user
+        )
+
+        return bool(exercise_added)
 
     def get_exercises(self):
         pass

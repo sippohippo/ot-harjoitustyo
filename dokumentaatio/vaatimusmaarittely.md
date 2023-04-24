@@ -29,16 +29,16 @@ These functionalities will be implemented as early as possible during the develo
 
 ### Using the app as a regular user after logging in
 
-1. The user can choose to add the data from a completed exercise
-	* The user adds the date, exercise type, weight and number of repetitions
+1. The user can choose to add the data from a completed exercise (**Completed**)
+	* The user adds the date, exercise type, weight and number of repetitions (**Completed**)
 		* The program checks for mistakes and does not input them if they are bad (e.g. repetition not whole number, weight not int/float)
 2. The user can review previous exercises by date
 	* The user can edit exercises to correct mistakes
 	* The user can remove exercises
 3. The user can remove the profile
 	* This requires writing the profile's password correctly
-4. The user can log out
-	* Before logging out the user is asked if they are sure (y/n)
+4. The user can log out (**Completed**)
+	* Before logging out the user is asked if they are sure (y/n) (**Completed**)
 
 ## Possible future functionalities  
 

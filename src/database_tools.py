@@ -1,5 +1,10 @@
 from database import db_connection
 
+class UserAlreadyExists(Exception):
+    pass
+
+class UnableToAddExercise(Exception):
+    pass
 
 class DatabaseTools:
 
@@ -7,6 +12,38 @@ class DatabaseTools:
         self._data = data
 
     # These queries interact with the exercises table
+
+    def add_exercise(self,
+                     exercise_id,
+                     exercise_type,
+                     set_number,
+                     repetitions,
+                     weight,
+                     date_of_exercise,
+                     user):
+
+        cur = self._data.cursor()
+        try:
+            cur.execute('''INSERT INTO exercises (
+                        id,
+                        exercise_type,
+                        set_number,
+                        repetitions,
+                        weight,
+                        date_of_exercise,
+                        exercise_username) 
+                        VALUES (?,?,?,?,?,?,?)''', [exercise_id,
+                                                    exercise_type,
+                                                    set_number,
+                                                    repetitions,
+                                                    weight,
+                                                    date_of_exercise,
+                                                    user]
+                        )
+            self._data.commit()
+            return True
+        except UnableToAddExercise:
+            return False
 
     def return_exercises(self):
         pass
@@ -29,7 +66,7 @@ class DatabaseTools:
                         username, password])
             self._data.commit()
             return True
-        except:
+        except UserAlreadyExists:
             return False
 
     def return_user(self, username):

@@ -58,7 +58,9 @@ class GymApplication:
         command = input("Command: ")
 
         if command == str(4):
-            self._NotLoggedIn = True
+            self._logout()
+        elif command == str(1):
+            self._add_exercise()
         else:
             print("Invalind input")
 
@@ -113,3 +115,37 @@ class GymApplication:
             print("")
 
     # THESE FUNCTIONS ARE THE COMMANDS FOR THE MAIN INTERFACE
+
+    def _logout(self):
+        confirmation = input("Confirm logout by typing y and pressing enter: ")
+        if confirmation == "y":
+            self._NotLoggedIn = True
+
+    def _add_exercise(self):
+        print("")
+        print("Input the set number and repetitions as numbers like 2, 3")
+        print("Input the weight as a number such as 20 or 23.5")
+        print("Input the date in DD-MM-YY format")
+        print("")
+        exercise_type = input("Exercise name: ")
+        set_number = input("Set number: ")
+        repetitions = input("Number of repeats: ")
+        weight = input("Weight (kg): ")
+        date = input("Date of exercise (DD-MM-YY) format: ")
+
+        added_succesfully = exercise_service.create_exercise(
+            exercise_type,
+            set_number,
+            repetitions,
+            weight,
+            date
+        )
+
+        if added_succesfully == True:
+            print("")
+            print("Exercise added")
+            print("")
+        else:
+            print("")
+            print("Invalid input, please try again")
+            print("")

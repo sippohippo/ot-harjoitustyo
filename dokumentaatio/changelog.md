@@ -23,3 +23,4 @@
 - Removed all printing outside of UI
 - Creating new accounts and logging in now works as intended
 - First version of main logged in UI created
+- Removed use of date module and replaced with str
