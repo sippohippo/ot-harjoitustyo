@@ -1,10 +1,13 @@
 from database import db_connection
 
+
 class UserAlreadyExists(Exception):
     pass
 
+
 class UnableToAddExercise(Exception):
     pass
+
 
 class DatabaseTools:
 
@@ -13,14 +16,15 @@ class DatabaseTools:
 
     # These queries interact with the exercises table
 
-    def add_exercise(self,
-                     exercise_id,
-                     exercise_type,
-                     set_number,
-                     repetitions,
-                     weight,
-                     date_of_exercise,
-                     user):
+    def add_exercise(self, exercise):
+
+        exercise_id = exercise.id
+        exercise_type = exercise.exercise_type
+        set_number = exercise.set_number
+        repetitions = exercise.repetitions
+        weight = exercise.weight
+        date_of_exercise = exercise.date_of_exercise
+        user = exercise.user
 
         cur = self._data.cursor()
         try:

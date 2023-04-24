@@ -24,15 +24,7 @@ class ExerciseService:
             exercise_type, set_number, repetitions, weight, date_of_exercise,
             user=self._user.username)
 
-        exercise_added = self._data.add_exercise(
-            exercise.id,
-            exercise.exercise_type,
-            exercise.set_number,
-            exercise.repetitions,
-            exercise.weight,
-            exercise.date_of_exercise,
-            exercise.user
-        )
+        exercise_added = self._data.add_exercise(exercise)
 
         return bool(exercise_added)
 
@@ -63,8 +55,6 @@ class ExerciseService:
             self._data.remove_user(username)
             return True
         return False
-
-        #   print("Invalid password")
 
     def logout(self):
         pass
