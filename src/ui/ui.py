@@ -138,9 +138,11 @@ class GymApplication:
 
     def _add_exercise(self):
         print("")
-        print("Input the set number and repetitions as numbers like 3 or 10")
-        print("Input the weight with or without decimals 20 or 23.5")
-        print("Input the date in DD-MM-YY format")
+        print("Input the name of the exercise (e.g. Barbell Curl)")
+        print("Input the set number (e.g. 3)")
+        print("Input the number of repetitions (e.g. 10)")        
+        print("Input the weight with or without decimals (e.g. 20 or 23.5)")
+        print("Input the date in DD-MM-YY format (e.g. 25-04-23)")
         print("")
         exercise_type = input("Exercise name: ")
         set_number = input("Set number: ")
