@@ -43,8 +43,6 @@ poetry run invoke build
 
 5. Start the program
 
-Note! While this runs, it is still more of a placeholder until the UI and program logic's first versions are completed.
-
 ```bash
 poetry run invoke start
 ```
