@@ -184,6 +184,7 @@ class GymApplication:
                     print(exercise)
             elif command == str(1):
                 exercises = self._ExerciseService.get_exercises()
+                print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
                 for exercise in exercises:
                     print(exercise)
             else:

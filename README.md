@@ -20,13 +20,13 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 ## Installation and setup
 
-1. Clone this repository 
+1. Clone this repository as shown below (or download the release)
 
 ```bash
 git clone https://github.com/sippohippo/ot-harjoitustyo
 ```
 
-2. Go to the newly created directory
+2. Go to the newly created directory (or unpack the downloaded release zip file and go to its directory)
 
 ```bash
 cd ot-harjoitustyo
