@@ -3,6 +3,9 @@
 
 The primary purpose of this app is to allow a user to record what exercises they have done at a gym and to track how they have developed overtime in terms of the weights and repetitions. No ads, no unnecessary features, just a pure elegant and functional gym diary. 
 
+## Release
+
+V1 link here
 
 
 ## Documentation

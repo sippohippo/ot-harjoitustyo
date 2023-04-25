@@ -26,4 +26,4 @@
 - Removed use of date module and replaced with str
 - Added the ability to add exercises
 - Added the ability to view exercises (all or filtering by date)
-- Added tests for all database_tools functions except for exceptions branches
+- Added tests for all database_tools functions except for exception branches
