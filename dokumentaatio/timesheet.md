@@ -22,5 +22,6 @@
 | 24.4.2023 | 3                | Adding the ability to add exercises        |
 | 24.4.2023 | 1                | Adding the ability to view exercises       |
 | 25.4.2023 | 1                | Building ui for exercise view              |
+| 25.4.2023 | 1.5              | Testing for database tools, documentation  |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 30               |                                            |
+| **Total** | 30.5             |                                            |
