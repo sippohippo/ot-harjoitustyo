@@ -3,9 +3,9 @@
 
 The primary purpose of this app is to allow a user to record what exercises they have done at a gym and to track how they have developed overtime in terms of the weights and repetitions. No ads, no unnecessary features, just a pure elegant and functional gym diary. 
 
-## Release
+## Releases
 
-[V1 Release](https://github.com/sippohippo/ot-harjoitustyo/releases/tag/viikko5), published on Week 5 of the course
+[V1 Release](https://github.com/sippohippo/ot-harjoitustyo/releases/tag/viikko5), published on week 5 of the course
 
 
 ## Documentation
