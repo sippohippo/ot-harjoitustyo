@@ -14,6 +14,7 @@ class GymApplication:
         print("3 quit")
 
     def main_interface_instructions(self):
+        print("")
         print("MAIN MENU")
         print("")
         print("Please select one by entering the number:")
@@ -21,6 +22,15 @@ class GymApplication:
         print("2 view past exercises")
         print("3 remove profile")
         print("4 log out")
+
+    def exercise_viewing_instructions(self):
+        print("")
+        print("VIEWING PAST EXERCISES")
+        print("")
+        print("Please select one by entering the number:")
+        print("1 view all completed exercises")
+        print("2 view completed exercises by date")
+        print("3 back to main menu")
 
     def execute(self):
         while True:
@@ -65,6 +75,8 @@ class GymApplication:
             self._add_exercise()
         else:
             print("Invalind input")
+
+
 
     # THESE FUNCTIONS ARE THE COMMANDS FOR THE LOGIN INTERFACE
 
@@ -126,8 +138,8 @@ class GymApplication:
 
     def _add_exercise(self):
         print("")
-        print("Input the set number and repetitions as numbers like 2, 3")
-        print("Input the weight as a number such as 20 or 23.5")
+        print("Input the set number and repetitions as numbers like 3 or 10")
+        print("Input the weight with or without decimals 20 or 23.5")
         print("Input the date in DD-MM-YY format")
         print("")
         exercise_type = input("Exercise name: ")
@@ -154,4 +166,29 @@ class GymApplication:
             print("")
 
     def _view_exercises(self):
-        pass
+        while True:
+            self.exercise_viewing_instructions()
+            print("")
+            command = str(input("Command: "))
+
+            if command == str(3):
+                break
+            elif command == str(2):
+                print("")
+                print("Please provide the date in DD-MM-YY")
+                date = input("Date: ")
+                print("")
+                exercises = self._ExerciseService.get_exercises_by_date(date)
+                print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
+                for exercise in exercises:
+                    print(exercise)
+            elif command == str(1):
+                exercises = self._ExerciseService.get_exercises()
+                for exercise in exercises:
+                    print(exercise)
+            else:
+                print("Invalind input")
+
+
+
+

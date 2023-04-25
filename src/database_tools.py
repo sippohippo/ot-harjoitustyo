@@ -52,14 +52,19 @@ class DatabaseTools:
     def return_exercises(self, username):
         cur = self._data.cursor()
         query_result = cur.execute(
-            "SELECT * FROM exercises WHERE exercise_username=?", [username]).fetchone()
+            '''SELECT 
+            date_of_exercise, exercise_type, set_number, repetitions, weight 
+            FROM exercises WHERE exercise_username=?''', [username]).fetchall()
         return query_result
 
     def return_exercises_by_date(self, username, date):
         cur = self._data.cursor()
         query_result = cur.execute(
-            "SELECT * FROM exercises WHERE exercise_username=? AND date_of_exercise=?", [
-            username, date]).fetchone()
+            '''SELECT 
+            date_of_exercise, exercise_type, set_number, repetitions, weight 
+            FROM exercises 
+            WHERE exercise_username=? AND date_of_exercise=?''', [
+            username, date]).fetchall()
         return query_result
 
     def update_exercise(self):

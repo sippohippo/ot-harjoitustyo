@@ -21,5 +21,6 @@
 | 24.4.2023 | 2                | Building ui, debugging services            |
 | 24.4.2023 | 3                | Adding the ability to add exercises        |
 | 24.4.2023 | 1                | Adding the ability to view exercises       |
+| 25.4.2023 | 1                | Building ui for exercise view              |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 29               |                                            |
+| **Total** | 30               |                                            |
