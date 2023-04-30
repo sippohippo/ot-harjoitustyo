@@ -18,6 +18,9 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 [Architecture](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[User guide](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
+
 ## Installation and setup
 
 1. Clone this repository as shown below (or download the release)
