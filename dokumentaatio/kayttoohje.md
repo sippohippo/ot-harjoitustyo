@@ -10,7 +10,7 @@ Cloning can be done by opening the terminal (command line) and entering:
 git clone https://github.com/sippohippo/ot-harjoitustyo
 ```
 
-The downloadable releases can be found by clicking [here](https://github.com/sippohippo/ot-harjoitustyo/releases.
+The downloadable releases can be found by clicking [here](https://github.com/sippohippo/ot-harjoitustyo/releases.)
 
 
 ## Setup
@@ -59,7 +59,7 @@ To view previous exercises, use the command 1 or 2 and press enter in the main m
 
 With command 2 you will be asked to provide a date and then the program will print out all exercises completed on that day.
 
-## For developers
+# For developers
 
 If you are intending to further develop this program, below is a list of useful commands that have already been defined that you can use:
 
