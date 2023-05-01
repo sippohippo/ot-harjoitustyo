@@ -133,7 +133,7 @@ class GymApplication:
             self._NotLoggedIn = False
         else:
             print("")
-            print("Invalid username or password")
+            print("INVALID USERNAME OR PASSWORD")
             print("")
 
     def _check_username_and_password(self):
@@ -154,17 +154,15 @@ class GymApplication:
         print("Are you sure you want to remove your account?")
         print("To confirm, please enter your username and password")
         print("")
-        login_successful = self._check_username_and_password()
-        if login_successful == True:
-
-            # REMOVAL HERE
-
+        username = input("Username: ")
+        password = input("Password: ")
+        
+        if self._ExerciseService.delete_user(username, password) == True:
             print("")
-            Print("Profile succesfully removed")
+            print("Profile succesfully removed")
             print("")
             self._NotLoggedIn = True
             exercise_service.logout()
-
         else:
             print("")
             print("INVALID USERNAME OF PASSWORD!")
@@ -253,4 +251,9 @@ class GymApplication:
             print("")
 
     def _delete_exercise(self):
-        pass
+        print("")
+        print("")
+        print("What exercise do you want to delete? Please enter the exercise-ID.")
+        exercise_id = input("Exercise-ID: ")
+        self._ExerciseService.delete_exercise(exercise_id)
+        print("")

@@ -42,6 +42,9 @@ class ExerciseService:
             column, new_value, exercise_id)
         return edit_successful
 
+    def delete_exercise(self, exercise_id):
+        self._data.remove_exercise(exercise_id)
+
     # User services
 
     def new_user(self, username, password):

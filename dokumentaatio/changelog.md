@@ -33,3 +33,4 @@
 - User guide added
 - Created new method for checking log in to avoid repeating code
 - Ability to edit exercises added
+- Ability to remove profile added

@@ -71,8 +71,10 @@ class DatabaseTools:
         except sqlite3.OperationalError:
             return False
 
-    def remove_exercise(self):
-        pass
+    def remove_exercise(self, exercise_id):
+        cur = self._data.cursor()
+        cur.execute("DELETE FROM exercises WHERE id=?", [exercise_id])
+        self._data.commit()
 
     # These queries interact with the users table
 
@@ -94,6 +96,7 @@ class DatabaseTools:
 
     def remove_user(self, username):
         cur = self._data.cursor()
+        cur.execute("DELETE FROM exercises WHERE exercise_username=?", [username])
         cur.execute("DELETE FROM users WHERE username=?", [username])
         self._data.commit()
 

@@ -28,5 +28,7 @@
 | 30.4.2023 | 0.5              | User guide 1st version                     |
 | 1.5.2023  | 1                | Updating the UI                            |
 | 1.5.2023  | 2                | Adding ability to edit exercises           |
+| 1.5.2023  | 0.5              | Removing profiles added                    |
+| 1.5.2023  | 0.5              | Removing exercises added                   |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 35.0             |                                            |
+| **Total** | 36.0             |                                            |

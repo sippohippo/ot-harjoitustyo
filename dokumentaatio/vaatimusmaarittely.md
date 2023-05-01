@@ -33,10 +33,10 @@ These functionalities will be implemented as early as possible during the develo
 	* The user adds the date, exercise type, weight and number of repetitions (**Completed**)
 		* The program checks for mistakes and does not input them if they are bad (e.g. repetition not whole number, weight not int/float)
 2. The user can review previous exercises by date (**Completed**)
-	* The user can edit exercises to correct mistakes
-	* The user can remove exercises
-3. The user can remove the profile
-	* This requires writing the profile's password correctly
+	* The user can edit exercises to correct mistakes (**Completed**)
+	* The user can remove exercises (**Completed**)
+3. The user can remove the profile (**Completed**)
+	* This requires writing the profile's password correctly (**Completed**)
 4. The user can log out (**Completed**)
 	* Before logging out the user is asked if they are sure (y/n) (**Completed**)
 
