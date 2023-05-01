@@ -40,7 +40,7 @@ class GymApplication:
         print("")
         print("Input the name of the exercise (e.g. Barbell Curl)")
         print("Input the set number (e.g. 3)")
-        print("Input the number of repetitions (e.g. 10)")        
+        print("Input the number of repetitions (e.g. 10)")
         print("Input the weight with or without decimals (e.g. 20 or 23.5)")
         print("Input the date in DD-MM-YY format (e.g. 25-04-23)")
         print("")
@@ -90,7 +90,6 @@ class GymApplication:
             self._add_exercise()
         else:
             print("Invalind input")
-
 
     def _new_user(self):
         print("What username do you want? Minimum length is 4 characters")
@@ -204,7 +203,7 @@ class GymApplication:
             if command == str(5):
                 break
             elif command == str(4):
-                self._delete_exercise()                
+                self._delete_exercise()
             elif command == str(3):
                 self._edit_exercise()
             elif command == str(2):
@@ -217,9 +216,9 @@ class GymApplication:
     def _view_exercise(self):
         print("")
         exercises = self._ExerciseService.get_exercises()
-        print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
+        print("Date | Exercise Type | Set | Repetitions | Weight (kg) | Exercise-ID")
         for exercise in exercises:
-            print(exercise)        
+            print(exercise)
 
     def _view_exercise_by_date(self):
         print("")
@@ -227,13 +226,31 @@ class GymApplication:
         date = input("Date: ")
         print("")
         exercises = self._ExerciseService.get_exercises_by_date(date)
-        print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
+        print("Date | Exercise Type | Set | Repetitions | Weight (kg) | Exercise-ID")
         for exercise in exercises:
             print(exercise)
 
     def _edit_exercise(self):
-        pass
+        print("")
+        print("What exercise do you want to edit? Please enter the exercise-ID.")
+        exercise_id = input("Exercise-ID: ")
+        print("")
+        print("What parameter do you want to change?")
+        print("Possible choices: date_of_exercise, exercise_type, set_number, repetitions, weight")
+        column = input("Name of parameter: ")
+        print("")
+        print("What is the new value to be put into the parameter?")
+        new_value = input("New value: ")
+        edited_successfully = self._ExerciseService.edit_exercise(
+            column, new_value, exercise_id)
+        if edited_successfully == True:
+            print("")
+            print("Edit successful")
+            print("")
+        else:
+            print("")
+            print("Invalid input, please try again")
+            print("")
 
     def _delete_exercise(self):
         pass
-

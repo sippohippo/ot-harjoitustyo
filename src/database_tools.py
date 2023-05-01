@@ -1,12 +1,5 @@
+import sqlite3
 from database import db_connection
-
-
-class UserAlreadyExists(Exception):
-    pass
-
-
-class UnableToAddExercise(Exception):
-    pass
 
 
 class DatabaseTools:
@@ -46,14 +39,14 @@ class DatabaseTools:
                         )
             self._data.commit()
             return True
-        except UnableToAddExercise:
+        except sqlite3.OperationalError:
             return False
 
     def return_exercises(self, username):
         cur = self._data.cursor()
         query_result = cur.execute(
             '''SELECT 
-            date_of_exercise, exercise_type, set_number, repetitions, weight 
+            date_of_exercise, exercise_type, set_number, repetitions, weight, id 
             FROM exercises WHERE exercise_username=?''', [username]).fetchall()
         return query_result
 
@@ -61,14 +54,22 @@ class DatabaseTools:
         cur = self._data.cursor()
         query_result = cur.execute(
             '''SELECT 
-            date_of_exercise, exercise_type, set_number, repetitions, weight 
+            date_of_exercise, exercise_type, set_number, repetitions, weight, id 
             FROM exercises 
             WHERE exercise_username=? AND date_of_exercise=?''', [
-            username, date]).fetchall()
+                username, date]).fetchall()
         return query_result
 
-    def update_exercise(self):
-        pass
+    def update_exercise(self, column, new_value, exercise_id):
+        cur = self._data.cursor()
+
+        try:
+            cur.execute(
+                f'''UPDATE EXERCISES SET {column} = {new_value} WHERE id="{exercise_id}"''')
+            self._data.commit()
+            return True
+        except sqlite3.OperationalError:
+            return False
 
     def remove_exercise(self):
         pass
@@ -82,7 +83,7 @@ class DatabaseTools:
                         username, password])
             self._data.commit()
             return True
-        except UserAlreadyExists:
+        except sqlite3.IntegrityError:
             return False
 
     def return_user(self, username):

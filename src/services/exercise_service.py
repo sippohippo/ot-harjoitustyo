@@ -33,11 +33,14 @@ class ExerciseService:
         return exercises
 
     def get_exercises_by_date(self, date):
-        exercises = self._data.return_exercises_by_date(self._user.username, date)
+        exercises = self._data.return_exercises_by_date(
+            self._user.username, date)
         return exercises
 
-    def edit_exercise(self):
-        pass
+    def edit_exercise(self, column, new_value, exercise_id):
+        edit_successful = self._data.update_exercise(
+            column, new_value, exercise_id)
+        return edit_successful
 
     # User services
 
@@ -63,5 +66,6 @@ class ExerciseService:
 
     def logout(self):
         self._user = None
+
 
 exercise_service = ExerciseService(db_tools)
