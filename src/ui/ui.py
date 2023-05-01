@@ -7,6 +7,8 @@ class GymApplication:
         self._ExerciseService = exercise_service
         self._NotLoggedIn = True
 
+    # THESE FUNCTIONS ARE THE COMMANDS FOR THE INTERFACES
+
     def login_instructions(self):
         print("Please select one by entering the number:")
         print("1 login to existing user")
@@ -19,7 +21,7 @@ class GymApplication:
         print("")
         print("Please select one by entering the number:")
         print("1 add exercise")
-        print("2 view past exercises")
+        print("2 view and edit past exercises")
         print("3 remove profile")
         print("4 log out")
 
@@ -30,7 +32,18 @@ class GymApplication:
         print("Please select one by entering the number:")
         print("1 view all completed exercises")
         print("2 view completed exercises by date")
-        print("3 back to main menu")
+        print("3 edit an exercise")
+        print("4 remove an exercise")
+        print("5 back to main menu")
+
+    def add_exercise_instructions(self):
+        print("")
+        print("Input the name of the exercise (e.g. Barbell Curl)")
+        print("Input the set number (e.g. 3)")
+        print("Input the number of repetitions (e.g. 10)")        
+        print("Input the weight with or without decimals (e.g. 20 or 23.5)")
+        print("Input the date in DD-MM-YY format (e.g. 25-04-23)")
+        print("")
 
     def execute(self):
         while True:
@@ -69,16 +82,15 @@ class GymApplication:
 
         if command == str(4):
             self._logout()
+        elif command == str(3):
+            self._remove_user()
         elif command == str(2):
-            self._view_exercises()
+            self._view_exercises_menu()
         elif command == str(1):
             self._add_exercise()
         else:
             print("Invalind input")
 
-
-
-    # THESE FUNCTIONS ARE THE COMMANDS FOR THE LOGIN INTERFACE
 
     def _new_user(self):
         print("What username do you want? Minimum length is 4 characters")
@@ -117,16 +129,18 @@ class GymApplication:
             self._new_user()
 
     def _login(self):
-        print("")
-        username = input("Username: ")
-        password = input("Password: ")
-        login_successful = exercise_service.login(username, password)
+        login_successful = self._check_username_and_password()
         if login_successful == True:
             self._NotLoggedIn = False
         else:
             print("")
             print("Invalid username or password")
             print("")
+
+    def _check_username_and_password(self):
+        username = input("Username: ")
+        password = input("Password: ")
+        return exercise_service.login(username, password)
 
     # THESE FUNCTIONS ARE THE COMMANDS FOR THE MAIN INTERFACE
 
@@ -136,14 +150,29 @@ class GymApplication:
             self._NotLoggedIn = True
             exercise_service.logout()
 
+    def _remove_user(self):
+        print("")
+        print("Are you sure you want to remove your account?")
+        print("To confirm, please enter your username and password")
+        print("")
+        login_successful = self._check_username_and_password()
+        if login_successful == True:
+
+            # REMOVAL HERE
+
+            print("")
+            Print("Profile succesfully removed")
+            print("")
+            self._NotLoggedIn = True
+            exercise_service.logout()
+
+        else:
+            print("")
+            print("INVALID USERNAME OF PASSWORD!")
+            print("")
+
     def _add_exercise(self):
-        print("")
-        print("Input the name of the exercise (e.g. Barbell Curl)")
-        print("Input the set number (e.g. 3)")
-        print("Input the number of repetitions (e.g. 10)")        
-        print("Input the weight with or without decimals (e.g. 20 or 23.5)")
-        print("Input the date in DD-MM-YY format (e.g. 25-04-23)")
-        print("")
+        self.add_exercise_instructions()
         exercise_type = input("Exercise name: ")
         set_number = input("Set number: ")
         repetitions = input("Number of repeats: ")
@@ -167,31 +196,44 @@ class GymApplication:
             print("Invalid input, please try again")
             print("")
 
-    def _view_exercises(self):
+    def _view_exercises_menu(self):
         while True:
             self.exercise_viewing_instructions()
             print("")
             command = str(input("Command: "))
-
-            if command == str(3):
+            if command == str(5):
                 break
+            elif command == str(4):
+                self._delete_exercise()                
+            elif command == str(3):
+                self._edit_exercise()
             elif command == str(2):
-                print("")
-                print("Please provide the date in DD-MM-YY")
-                date = input("Date: ")
-                print("")
-                exercises = self._ExerciseService.get_exercises_by_date(date)
-                print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
-                for exercise in exercises:
-                    print(exercise)
+                self._view_exercise_by_date()
             elif command == str(1):
-                exercises = self._ExerciseService.get_exercises()
-                print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
-                for exercise in exercises:
-                    print(exercise)
+                self._view_exercise()
             else:
                 print("Invalind input")
 
+    def _view_exercise(self):
+        print("")
+        exercises = self._ExerciseService.get_exercises()
+        print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
+        for exercise in exercises:
+            print(exercise)        
 
+    def _view_exercise_by_date(self):
+        print("")
+        print("Please provide the date in DD-MM-YY")
+        date = input("Date: ")
+        print("")
+        exercises = self._ExerciseService.get_exercises_by_date(date)
+        print("Date | Exercise Type | Set | Repetitions | Weight (kg)")
+        for exercise in exercises:
+            print(exercise)
 
+    def _edit_exercise(self):
+        pass
+
+    def _delete_exercise(self):
+        pass
 

@@ -10,7 +10,7 @@ Cloning can be done by opening the terminal (command line) and entering:
 git clone https://github.com/sippohippo/ot-harjoitustyo
 ```
 
-The downloadable releases can be found by clicking [here](https://github.com/sippohippo/ot-harjoitustyo/releases.)
+The downloadable releases can be found by clicking [here](https://github.com/sippohippo/ot-harjoitustyo/releases.).
 
 
 ## Setup
@@ -47,17 +47,29 @@ Before using the program you need to have a user. You can create a new user with
 
 To log in to an existing user, type 1 and press enter in the starting screen. First you will need to type your username and then press enter and then your password and then press enter. 
 
-After being logged in, it is possible to log out with the command 4. Type 4 and press enter and then you will be asked to confirm this by typing y and pressing enter. Any other command will return you back to the main menu and not log you out. 
+After being logged in, it is possible to log out with the command 5. Type 5 and press enter and then you will be asked to confirm this by typing y and pressing enter. Any other command will return you back to the main menu and not log you out. 
 
 ## Adding exercises
 
 To add exercises, use the command 1 and press enter in the main menu. Then you will be asked to enter the information about the completed exercise one at a time. Please follow the instructions given to you at each step. 
 
-## Viewing previous exercises
+## Viewing and editing past exercises
+
+First go to the *view and edit past exercises* view with the command 2 and by pressing enter. This takes you to a new menu.
+
+### Viewing previous exercises
 
 To view previous exercises, use the command 1 or 2 and press enter in the main menu. With command 1 you will simply get a list of all completed exercises in the order which they have been entered.
 
 With command 2 you will be asked to provide a date and then the program will print out all exercises completed on that day.
+
+### Editing past exercises
+
+To edit previous exercises, use the command 3 and press enter.
+
+### Deleting past exercises
+
+To delete previous exercises, use the command 4 and press enter.
 
 # For developers
 

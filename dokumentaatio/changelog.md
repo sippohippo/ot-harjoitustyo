@@ -27,3 +27,7 @@
 - Added the ability to add exercises
 - Added the ability to view exercises (all or filtering by date)
 - Added tests for all database_tools functions except for exception branches
+
+## Week 6
+
+- User guide added
