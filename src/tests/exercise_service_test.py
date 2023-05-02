@@ -37,15 +37,14 @@ class TestExerciseServices(unittest.TestCase):
         self._ExerciseService._user = RegularUser(test_username, test_password)
 
     def test_login_correct_credentials_works(self):
-    	return_value = self._ExerciseService.login("McTest", "1234")
-    	self.assertEqual(return_value, True)
+        return_value = self._ExerciseService.login("McTest", "1234")
+        self.assertEqual(return_value, True)
 
     def test_login_wrong_credentials_works(self):
-    	return_value = self._ExerciseService.login("McTest", "Wrong_password")
-    	self.assertEqual(return_value, False)
+        return_value = self._ExerciseService.login("McTest", "Wrong_password")
+        self.assertEqual(return_value, False)
 
     def test_create_exercise_works(self):
-    	return_value = self._ExerciseService.create_exercise("Barbell Curl",1,10,25.0,"12-12-12")
-    	self.assertEqual(return_value, True)
-
-
+        return_value = self._ExerciseService.create_exercise(
+            "Barbell Curl", 1, 10, 25.0, "12-12-12")
+        self.assertEqual(return_value, True)

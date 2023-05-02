@@ -156,7 +156,7 @@ class GymApplication:
         print("")
         username = input("Username: ")
         password = input("Password: ")
-        
+
         if self._ExerciseService.delete_user(username, password) == True:
             print("")
             print("Profile succesfully removed")

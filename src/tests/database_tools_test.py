@@ -76,7 +76,6 @@ class TestDatabaseTools(unittest.TestCase):
         user = test_exercise.user
         exercise_id = test_exercise.id
 
-
         exercise_type2 = test_exercise2.exercise_type
         set_number2 = test_exercise2.set_number
         repetitions2 = test_exercise2.repetitions
@@ -84,7 +83,6 @@ class TestDatabaseTools(unittest.TestCase):
         date_of_exercise2 = test_exercise2.date_of_exercise
         user2 = test_exercise2.user
         exercise_id2 = test_exercise2.id
-
 
         correct_result = [(date_of_exercise, exercise_type, set_number, repetitions, weight, exercise_id),
                           (date_of_exercise2, exercise_type2, set_number2, repetitions2, weight2, exercise_id2)]
