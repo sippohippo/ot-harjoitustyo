@@ -34,3 +34,7 @@
 - Created new method for checking log in to avoid repeating code
 - Ability to edit exercises added
 - Ability to remove profile added
+- Tests for exercise_service added
+- Docstring to exercise_sercie added
+- Docstring to database_tools added 
+- Docstring to ui added

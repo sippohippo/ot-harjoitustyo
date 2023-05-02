@@ -113,7 +113,7 @@ class ExerciseService:
             password: String, the password of the new user.
 
         Returns:
-            True if the user is succesfully added, False if there is an error.
+            True if the user is successfully added, False if there is an error.
         """
 
         new_user_created = self._data.add_user(username, password)
@@ -127,7 +127,7 @@ class ExerciseService:
             password: String, the password of the user logging in.      
 
         Returns:
-            True if login is succesfull, False otherwise.
+            True if login is successful, False otherwise.
         """
 
         credentials = self._data.return_user(username)
@@ -145,7 +145,7 @@ class ExerciseService:
             password: String, the password of the user that is to be deleted.            
 
         Returns:
-            True if the deleting of the user is succesfull, False otherwise.       
+            True if the deleting of the user is successful, False otherwise.       
         """
 
         credentials = self._data.return_user(username)

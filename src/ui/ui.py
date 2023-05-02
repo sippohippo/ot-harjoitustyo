@@ -3,19 +3,23 @@ from entities.regular_user import RegularUser
 
 
 class GymApplication:
+    """Class for the text user interface of the program."""
+
     def __init__(self):
         self._ExerciseService = exercise_service
         self._NotLoggedIn = True
 
-    # THESE FUNCTIONS ARE THE COMMANDS FOR THE INTERFACES
-
     def login_instructions(self):
+        """Used to print the login instructions."""
+
         print("Please select one by entering the number:")
         print("1 login to existing user")
         print("2 create new user")
         print("3 quit")
 
     def main_interface_instructions(self):
+        """Used to print the main interface instructions."""
+
         print("")
         print("MAIN MENU")
         print("")
@@ -26,6 +30,8 @@ class GymApplication:
         print("4 log out")
 
     def exercise_viewing_instructions(self):
+        """Used to print the exervice viewing menu's instructions."""
+
         print("")
         print("VIEWING PAST EXERCISES")
         print("")
@@ -37,6 +43,8 @@ class GymApplication:
         print("5 back to main menu")
 
     def add_exercise_instructions(self):
+        """Used to print the exercise adding menu's instructions."""
+
         print("")
         print("Input the name of the exercise (e.g. Barbell Curl)")
         print("Input the set number (e.g. 3)")
@@ -46,6 +54,8 @@ class GymApplication:
         print("")
 
     def execute(self):
+        """Runs the program either in the login ui or main ui."""
+
         while True:
             print("")
             print("Welcome to the gym training app")
@@ -60,6 +70,8 @@ class GymApplication:
     # UIs
 
     def login_ui(self):
+        """The login menu UI logic."""
+
         print("")
         self.login_instructions()
         print("")
@@ -75,6 +87,8 @@ class GymApplication:
             print("Invalind input")
 
     def main_ui(self):
+        """The main menu UI logic."""
+
         print("")
         self.main_interface_instructions()
         print("")
@@ -92,6 +106,8 @@ class GymApplication:
             print("Invalind input")
 
     def _new_user(self):
+        """The UI for adding a new user."""        
+
         print("What username do you want? Minimum length is 4 characters")
 
         while True:
@@ -128,6 +144,8 @@ class GymApplication:
             self._new_user()
 
     def _login(self):
+        """The UI logic for logging in and printing if login fails."""        
+
         login_successful = self._check_username_and_password()
         if login_successful == True:
             self._NotLoggedIn = False
@@ -137,6 +155,11 @@ class GymApplication:
             print("")
 
     def _check_username_and_password(self):
+        """Used to ask for the username and password and check if it is correct.
+
+        Returns: True if exercise_service.login is succesfull, False otherwise.
+        """
+
         username = input("Username: ")
         password = input("Password: ")
         return exercise_service.login(username, password)
@@ -144,12 +167,16 @@ class GymApplication:
     # THESE FUNCTIONS ARE THE COMMANDS FOR THE MAIN INTERFACE
 
     def _logout(self):
+        """Confirming log out."""
+
         confirmation = input("Confirm logout by typing y and pressing enter: ")
         if confirmation == "y":
             self._NotLoggedIn = True
             exercise_service.logout()
 
     def _remove_user(self):
+        """Removing user logic and UI."""
+
         print("")
         print("Are you sure you want to remove your account?")
         print("To confirm, please enter your username and password")
@@ -169,6 +196,8 @@ class GymApplication:
             print("")
 
     def _add_exercise(self):
+        """Adding exercises logic and UI."""
+
         self.add_exercise_instructions()
         exercise_type = input("Exercise name: ")
         set_number = input("Set number: ")
@@ -194,6 +223,8 @@ class GymApplication:
             print("")
 
     def _view_exercises_menu(self):
+        """Logic for exercise viewing menu."""
+
         while True:
             self.exercise_viewing_instructions()
             print("")
@@ -212,6 +243,8 @@ class GymApplication:
                 print("Invalind input")
 
     def _view_exercise(self):
+        """Viewing exercises UI and logic."""        
+
         print("")
         exercises = self._ExerciseService.get_exercises()
         print("Date | Exercise Type | Set | Repetitions | Weight (kg) | Exercise-ID")
@@ -219,6 +252,8 @@ class GymApplication:
             print(exercise)
 
     def _view_exercise_by_date(self):
+        """Viewing exercise by date UI and logic."""        
+
         print("")
         print("Please provide the date in DD-MM-YY")
         date = input("Date: ")
@@ -229,6 +264,8 @@ class GymApplication:
             print(exercise)
 
     def _edit_exercise(self):
+        """Editing exercise UI and logic."""        
+
         print("")
         print("What exercise do you want to edit? Please enter the exercise-ID.")
         exercise_id = input("Exercise-ID: ")
@@ -251,6 +288,8 @@ class GymApplication:
             print("")
 
     def _delete_exercise(self):
+        """Deleting exercise UI and logic."""
+
         print("")
         print("")
         print("What exercise do you want to delete? Please enter the exercise-ID.")
