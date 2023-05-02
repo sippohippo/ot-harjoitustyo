@@ -30,5 +30,6 @@
 | 1.5.2023  | 2                | Adding ability to edit exercises           |
 | 1.5.2023  | 0.5              | Removing profiles added                    |
 | 1.5.2023  | 0.5              | Removing exercises added                   |
+| 2.5.2023  | 1                | Adding tests to exercise_services          |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 36.0             |                                            |
+| **Total** | 37.0             |                                            |
