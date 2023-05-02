@@ -93,7 +93,7 @@ sequenceDiagram
 To be added...
 
 
-### Loggin in
+### Logging in
 
 To be added...
 
@@ -104,7 +104,7 @@ To be added...
 
 The data, which in this case is information on the users and exercises done by the users are stored in a SQLite database. These are stored in respectively named tables. The relational schema below shows the column names as well as relationship between the two tables.
 
-![Relational Schema](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/rschema)
+![Relational Schema](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/rschema.png)
 
 As can be seen, the username is a foreign key in the exercises table. Each user can have many exercises, but each exercise can have only one user. 
 
