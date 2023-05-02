@@ -2,7 +2,28 @@
 
 ## Package diagram
 
+The structure of the program follows the architecture laid out in the package diagram below.
+
 ![Package diagram](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/packagediagram_v2.png)
+
+The UI package is self explanatory as it contains the script that houses the user interface. The services package contains the main programming logic. Lastly, the entities package houses the main classes that are created, manipulated and stored: users and exercises. Left outside of the packages is the main script that executes the program, as well as two helper scripts that contains the initialization of the database and tools for accessing the database.
+
+## User interface (UI)
+
+The user interface is a classical text UI that is used through a command line. It consists on multiple different views, or menus, for the different actions. The larger menus are:
+
+* Login menu
+* Main menu
+* Exercise viewing menu
+* Exercise adding menu  
+
+In addition, there are smaller submenus where some inputs are given:
+
+* New user creation 
+* View exercise by date 
+* Edit exercise 
+* Delete exercise 
+* Remove user
 
 ## Application logic
 
@@ -33,7 +54,9 @@ The main two classes of the app are RegularUser that represent the users who rec
 
 ```
 
-## Sequence diagrams
+The application logic is housed in the services package and more specifically the ExerciseService class. This class is controlled by inputs given through the UI and provides methods for interacting with the database indirectly through the DatabaseTools class.
+
+## Sequence diagrams of different functionalities
 
 The sequence diagrams below explain how some critical components of the application logic functions under the hood. 
 
@@ -64,3 +87,33 @@ sequenceDiagram
 
     UI->>+UI: print("Exercise added")
 ```
+
+### Adding a new user
+
+To be added...
+
+
+### Loggin in
+
+To be added...
+
+
+## Data storage
+
+### High-level description
+
+The data, which in this case is information on the users and exercises done by the users are stored in a SQLite database. These are stored in respectively named tables. The relational schema below shows the column names as well as relationship between the two tables.
+
+![Relational Schema](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/rschema)
+
+As can be seen, the username is a foreign key in the exercises table. Each user can have many exercises, but each exercise can have only one user. 
+
+### DatabaseTools class
+
+The DatabaseTools class is used by the ExerciseService class to directly interact and manipulate the database. This way the program logic is separated from the database more explicitly. Note that the DatabaseTools class is stored outside of the packages in the main src directory in the file database_tools.py. 
+
+
+# Known flaws in the current architecture
+
+As this is primarily designed for personal use, it does not take into consideration the fact that in the database there will be a problem if two separate users were to record the exact same exercise, as these would not be unique. This could be fixed by adding an additional ID column.
+

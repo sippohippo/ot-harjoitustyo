@@ -38,3 +38,6 @@
 - Docstring to exercise_sercie added
 - Docstring to database_tools added 
 - Docstring to ui added
+- Architecture description expanded
+- V2 released
+

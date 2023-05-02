@@ -32,5 +32,6 @@
 | 1.5.2023  | 0.5              | Removing exercises added                   |
 | 2.5.2023  | 1                | Adding tests to exercise_services          |
 | 2.5.2023  | 1.5              | Adding docstring everywhere                |
+| 2.5.2023  | 1                | Expanding the architecture description     |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 38.5             |                                            |
+| **Total** | 39.5             |                                            |

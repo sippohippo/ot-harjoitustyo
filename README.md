@@ -7,6 +7,8 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 [V1 Release](https://github.com/sippohippo/ot-harjoitustyo/releases/tag/viikko5), published on week 5 of the course
 
+[V2 Release](https://github.com/sippohippo/ot-harjoitustyo/releases/tag/viikko6), published on week 6 of the course
+
 
 ## Documentation
 
