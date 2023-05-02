@@ -49,9 +49,10 @@ class TestDatabaseTools(unittest.TestCase):
         weight = test_exercise.weight
         date_of_exercise = test_exercise.date_of_exercise
         user = test_exercise.user
+        exercise_id = test_exercise.id
 
         correct_result = [(date_of_exercise, exercise_type,
-                           set_number, repetitions, weight)]
+                           set_number, repetitions, weight, exercise_id)]
 
         added_exercise_query_result = db_tools.return_exercises(
             test_exercise.user)
@@ -73,6 +74,8 @@ class TestDatabaseTools(unittest.TestCase):
         weight = test_exercise.weight
         date_of_exercise = test_exercise.date_of_exercise
         user = test_exercise.user
+        exercise_id = test_exercise.id
+
 
         exercise_type2 = test_exercise2.exercise_type
         set_number2 = test_exercise2.set_number
@@ -80,9 +83,11 @@ class TestDatabaseTools(unittest.TestCase):
         weight2 = test_exercise2.weight
         date_of_exercise2 = test_exercise2.date_of_exercise
         user2 = test_exercise2.user
+        exercise_id2 = test_exercise2.id
 
-        correct_result = [(date_of_exercise, exercise_type, set_number, repetitions, weight),
-                          (date_of_exercise2, exercise_type2, set_number2, repetitions2, weight2)]
+
+        correct_result = [(date_of_exercise, exercise_type, set_number, repetitions, weight, exercise_id),
+                          (date_of_exercise2, exercise_type2, set_number2, repetitions2, weight2, exercise_id2)]
 
         self.assertEqual(correct_result, return_exercise_result)
 
@@ -93,6 +98,7 @@ class TestDatabaseTools(unittest.TestCase):
         weight = test_exercise.weight
         date_of_exercise = test_exercise.date_of_exercise
         user = test_exercise.user
+        exercise_id = test_exercise.id
 
         # Adding 2 exercises, only 1 should be returned
         db_tools.add_exercise(test_exercise)
@@ -102,7 +108,7 @@ class TestDatabaseTools(unittest.TestCase):
             test_exercise.user, date_of_exercise)
 
         correct_result = [(date_of_exercise, exercise_type,
-                           set_number, repetitions, weight)]
+                           set_number, repetitions, weight, exercise_id)]
 
         self.assertEqual(correct_result, return_exercise_result)
 
