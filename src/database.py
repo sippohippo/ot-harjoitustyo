@@ -6,9 +6,7 @@ cursor = database.cursor()
 
 
 def database_setup():
-    '''
-    This function contains the coded needed to initializes the database 
-    '''
+    '''This function contains the coded needed to initializes the database '''
 
     cursor.execute("drop table if exists exercises;")
     cursor.execute("drop table if exists users;")

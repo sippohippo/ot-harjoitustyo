@@ -192,7 +192,7 @@ class GymApplication:
             exercise_service.logout()
         else:
             print("")
-            print("INVALID USERNAME OF PASSWORD!")
+            print("INVALID USERNAME OR PASSWORD!")
             print("")
 
     def _add_exercise(self):
