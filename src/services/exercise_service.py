@@ -8,7 +8,7 @@ class ExerciseService:
 
     def __init__(self, exercise_data=db_exercise_tools):
         self._exercise_data = exercise_data
-        """Constructor. Creates database_user_tools & database_exercise_tools instances.
+        """The constructor of the class. Creates a database_exercise_tools instance.
 
         Args:
             exercise_data: 

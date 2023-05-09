@@ -9,7 +9,7 @@ class UserService:
         self._data = data
         self.user = None
 
-        """The constructor of the class. Creates a database_tools instance.
+        """The constructor of the class. Creates a database_user_tools instance.
 
         Args:
             data: 

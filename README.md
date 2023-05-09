@@ -9,18 +9,21 @@ The primary purpose of this app is to allow a user to record what exercises they
 
 [V2 Release](https://github.com/sippohippo/ot-harjoitustyo/releases/tag/viikko6), published on week 6 of the course
 
+[Final release](https://github.com/sippohippo/ot-harjoitustyo/releases/tag/loppupalautus), published at the end of the course
 
 ## Documentation
 
+[User guide](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Software requirements specification](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Architecture](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+[Testing](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/testing.md)
 
 [Timesheet](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/timesheet.md)
 
 [Changelog](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
-
-[Architecture](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
-
-[User guide](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 
 ## Installation and setup

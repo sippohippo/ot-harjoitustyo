@@ -42,7 +42,7 @@ These functionalities will be implemented as early as possible during the develo
 
 ## Possible future functionalities  
 
-These functionalities will be implemented once the primary functionalities have been completed and if there is time to add more. 
+These functionalities could be implemented in the future to further extend the program.
 
 * The user can see high scores for different types of exercises
 * The user can set goals 
