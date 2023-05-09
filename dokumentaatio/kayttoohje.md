@@ -63,6 +63,8 @@ To view previous exercises, use the command 1 or 2 and press enter in the main m
 
 With command 2 you will be asked to provide a date and then the program will print out all exercises completed on that day.
 
+For the best experience, make sure your terminal window is wide enough so that each row prints out as one line. If the output looks messy, simply enlarge the window of the terminal.
+
 ### Editing past exercises
 
 To edit previous exercises, use the command 3 and press enter.

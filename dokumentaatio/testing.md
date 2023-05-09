@@ -2,6 +2,7 @@
 
 ## Unit testing
 
+Most testing in this project is done with the standard Python unittest unit testing framework. 
 
 ## Integration testing
 

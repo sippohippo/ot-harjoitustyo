@@ -54,7 +54,7 @@ The main two classes of the app are RegularUser that represent the users who rec
 
 ```
 
-The application logic is housed in the services package and more specifically the ExerciseService and UserService classes. These classes are controlled by inputs given through the UI and provide methods for interacting with the database indirectly through the DatabaseUserTools and DatabaseExerciseTools class.
+The application logic is housed in the services package and more specifically the `ExerciseService` and `UserService` classes. These classes are controlled by inputs given through the UI and provide methods for interacting with the database indirectly through the `DatabaseUserTools` and `DatabaseExerciseTools` class.
 
 ## Sequence diagrams of different functionalities
 
@@ -110,7 +110,7 @@ As can be seen, the username is a foreign key in the exercises table. Each user 
 
 ### DatabaseExerciseTools and DatabaseUserTools classes
 
-The DatabaseExerciseTools and DatabaseUserTools classes are used by the ExerciseService class and UserService class to directly interact and manipulate the database. This way the program logic is separated from the database more explicitly. Note that both of these database tools classes are stored outside of the packages in the main src directory in the file database_user_tools.py and database_exercise_tools.py. 
+The `DatabaseExerciseTools` and `DatabaseUserTools` classes are used by the `ExerciseService` class and `UserService` class to directly interact and manipulate the database. This way the program logic is separated from the database more explicitly. Note that both of these database tools classes are stored outside of the packages in the main src directory in the file [database_user_tools.py](https://github.com/sippohippo/ot-harjoitustyo/blob/master/src/database_user_tools.py) and [database_exercise_tools.py](https://github.com/sippohippo/ot-harjoitustyo/blob/master/src/database_exercise_tools.py). 
 
 
 # Known flaws in the current architecture
