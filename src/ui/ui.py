@@ -1,6 +1,7 @@
 from services.exercise_service import exercise_service
 from services.user_service import user_service
 from entities.regular_user import RegularUser
+from tabulate import tabulate
 
 
 class GymApplication:
@@ -249,9 +250,9 @@ class GymApplication:
 
         print("")
         exercises = self._ExerciseService.get_exercises()
-        print("Date | Exercise Type | Set | Repetitions | Weight (kg) | Exercise-ID")
-        for exercise in exercises:
-            print(exercise)
+        print(tabulate(exercises, headers=[
+            "Date", "Exercise Type","Set","Repetitions","Weight (kg)","Exercise-ID"],
+            tablefmt="github"))
 
     def _view_exercise_by_date(self):
         """Viewing exercise by date UI and logic."""
@@ -261,9 +262,9 @@ class GymApplication:
         date = input("Date: ")
         print("")
         exercises = self._ExerciseService.get_exercises_by_date(date)
-        print("Date | Exercise Type | Set | Repetitions | Weight (kg) | Exercise-ID")
-        for exercise in exercises:
-            print(exercise)
+        print(tabulate(exercises, headers=[
+            "Date", "Exercise Type","Set","Repetitions","Weight (kg)","Exercise-ID"], 
+            tablefmt="github"))
 
     def _edit_exercise(self):
         """Editing exercise UI and logic."""

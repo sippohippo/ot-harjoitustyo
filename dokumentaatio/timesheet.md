@@ -35,5 +35,7 @@
 | 2.5.2023  | 1                | Expanding the architecture description     |
 |-----------|------------------|--------------------------------------------|
 | 9.5.2023  | 3                | Splitting too large classes                |
+| 9.5.2023  | 1                | Updating tests and debugging               |
+| 9.5.2023  | 0.5              | Adding tabulate library and updating ui    |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 42.5             |                                            |
+| **Total** | 44.0             |                                            |
