@@ -43,5 +43,6 @@
 
 ## Week 7
 
-
-
+- Separated the ExerciseService class into two separate classes: ExerciseService and UserService
+- Separated the DatabaseTools class into two separate classes: DatabaseExerciseTools and DatabaseUserTools
+- Updated tests to match the new divided classes

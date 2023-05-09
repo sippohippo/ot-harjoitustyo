@@ -1,4 +1,5 @@
 from services.exercise_service import exercise_service
+from services.user_service import user_service
 from entities.regular_user import RegularUser
 
 
@@ -7,6 +8,7 @@ class GymApplication:
 
     def __init__(self):
         self._ExerciseService = exercise_service
+        self._UserService = user_service
         self._NotLoggedIn = True
 
     def login_instructions(self):
@@ -106,7 +108,7 @@ class GymApplication:
             print("Invalind input")
 
     def _new_user(self):
-        """The UI for adding a new user."""        
+        """The UI for adding a new user."""
 
         print("What username do you want? Minimum length is 4 characters")
 
@@ -130,7 +132,7 @@ class GymApplication:
             if password == password_repeat and len(password) >= 4:
                 break
 
-        new_user_created = exercise_service.new_user(username, password)
+        new_user_created = user_service.new_user(username, password)
 
         if new_user_created == True:
             print("New user created")
@@ -144,7 +146,7 @@ class GymApplication:
             self._new_user()
 
     def _login(self):
-        """The UI logic for logging in and printing if login fails."""        
+        """The UI logic for logging in and printing if login fails."""
 
         login_successful = self._check_username_and_password()
         if login_successful == True:
@@ -162,7 +164,7 @@ class GymApplication:
 
         username = input("Username: ")
         password = input("Password: ")
-        return exercise_service.login(username, password)
+        return user_service.login(username, password)
 
     # THESE FUNCTIONS ARE THE COMMANDS FOR THE MAIN INTERFACE
 
@@ -172,7 +174,7 @@ class GymApplication:
         confirmation = input("Confirm logout by typing y and pressing enter: ")
         if confirmation == "y":
             self._NotLoggedIn = True
-            exercise_service.logout()
+            user_service.logout()
 
     def _remove_user(self):
         """Removing user logic and UI."""
@@ -184,12 +186,12 @@ class GymApplication:
         username = input("Username: ")
         password = input("Password: ")
 
-        if self._ExerciseService.delete_user(username, password) == True:
+        if self._UserService.delete_user(username, password) == True:
             print("")
             print("Profile succesfully removed")
             print("")
             self._NotLoggedIn = True
-            exercise_service.logout()
+            user_service.logout()
         else:
             print("")
             print("INVALID USERNAME OR PASSWORD!")
@@ -243,7 +245,7 @@ class GymApplication:
                 print("Invalind input")
 
     def _view_exercise(self):
-        """Viewing exercises UI and logic."""        
+        """Viewing exercises UI and logic."""
 
         print("")
         exercises = self._ExerciseService.get_exercises()
@@ -252,7 +254,7 @@ class GymApplication:
             print(exercise)
 
     def _view_exercise_by_date(self):
-        """Viewing exercise by date UI and logic."""        
+        """Viewing exercise by date UI and logic."""
 
         print("")
         print("Please provide the date in DD-MM-YY")
@@ -264,7 +266,7 @@ class GymApplication:
             print(exercise)
 
     def _edit_exercise(self):
-        """Editing exercise UI and logic."""        
+        """Editing exercise UI and logic."""
 
         print("")
         print("What exercise do you want to edit? Please enter the exercise-ID.")

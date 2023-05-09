@@ -1,5 +1,6 @@
 import unittest
-from database_tools import db_tools
+from database_exercise_tools import db_exercise_tools
+from database_user_tools import db_user_tools
 from database import database_setup
 from entities.exercise import Exercise
 
@@ -26,22 +27,16 @@ test_username = "McTest"
 test_password = "1234"
 
 
-class TestDatabaseTools(unittest.TestCase):
+class TestDatabaseExerciseTools(unittest.TestCase):
     def setUp(self):
         database_setup()
-        db_tools.add_user(test_username, test_password)
+        db_user_tools.add_user(test_username, test_password)
 
     # Tests
 
-    def test_return_user_works(self):
-        test_query_result = db_tools.return_user(test_username)
-        correct_result = (test_username, test_password)
-
-        self.assertEqual(test_query_result, correct_result)
-
     def test_adding_exercise_works(self):
 
-        db_tools.add_exercise(test_exercise)
+        db_exercise_tools.add_exercise(test_exercise)
 
         exercise_type = test_exercise.exercise_type
         set_number = test_exercise.set_number
@@ -54,7 +49,7 @@ class TestDatabaseTools(unittest.TestCase):
         correct_result = [(date_of_exercise, exercise_type,
                            set_number, repetitions, weight, exercise_id)]
 
-        added_exercise_query_result = db_tools.return_exercises(
+        added_exercise_query_result = db_exercise_tools.return_exercises(
             test_exercise.user)
 
         self.assertEqual(correct_result, added_exercise_query_result)
@@ -63,10 +58,11 @@ class TestDatabaseTools(unittest.TestCase):
         pass
 
     def test_return_exercise_correct_output(self):
-        db_tools.add_exercise(test_exercise)
-        db_tools.add_exercise(test_exercise2)
+        db_exercise_tools.add_exercise(test_exercise)
+        db_exercise_tools.add_exercise(test_exercise2)
 
-        return_exercise_result = db_tools.return_exercises(test_exercise.user)
+        return_exercise_result = db_exercise_tools.return_exercises(
+            test_exercise.user)
 
         exercise_type = test_exercise.exercise_type
         set_number = test_exercise.set_number
@@ -99,20 +95,13 @@ class TestDatabaseTools(unittest.TestCase):
         exercise_id = test_exercise.id
 
         # Adding 2 exercises, only 1 should be returned
-        db_tools.add_exercise(test_exercise)
-        db_tools.add_exercise(test_exercise2)
+        db_exercise_tools.add_exercise(test_exercise)
+        db_exercise_tools.add_exercise(test_exercise2)
 
-        return_exercise_result = db_tools.return_exercises_by_date(
+        return_exercise_result = db_exercise_tools.return_exercises_by_date(
             test_exercise.user, date_of_exercise)
 
         correct_result = [(date_of_exercise, exercise_type,
                            set_number, repetitions, weight, exercise_id)]
 
         self.assertEqual(correct_result, return_exercise_result)
-
-    def test_remove_user_works(self):
-        db_tools.remove_user(test_username)
-        test_query_result = db_tools.return_user(test_username)
-        correct_result = None
-
-        self.assertEqual(test_query_result, correct_result)

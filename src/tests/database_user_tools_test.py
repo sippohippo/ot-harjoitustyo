@@ -3,9 +3,6 @@ from database_exercise_tools import db_exercise_tools
 from database_user_tools import db_user_tools
 from database import database_setup
 from entities.exercise import Exercise
-from services.exercise_service import exercise_service
-from entities.regular_user import RegularUser
-from services.user_service import user_service
 
 
 test_exercise = Exercise(
@@ -30,16 +27,22 @@ test_username = "McTest"
 test_password = "1234"
 
 
-class TestExerciseServices(unittest.TestCase):
+class TestDatabaseUserTools(unittest.TestCase):
     def setUp(self):
         database_setup()
         db_user_tools.add_user(test_username, test_password)
-        db_exercise_tools.add_exercise(test_exercise)
-        self._ExerciseService = exercise_service
-        self._UserService = user_service
-        self._UserService.user = RegularUser(test_username, test_password)
 
-    def test_create_exercise_works(self):
-        return_value = self._ExerciseService.create_exercise(
-            "Barbell Curl", 1, 10, 25.0, "12-12-12")
-        self.assertEqual(return_value, True)
+    # Tests
+
+    def test_return_user_works(self):
+        test_query_result = db_user_tools.return_user(test_username)
+        correct_result = (test_username, test_password)
+
+        self.assertEqual(test_query_result, correct_result)
+
+    def test_remove_user_works(self):
+        db_user_tools.remove_user(test_username)
+        test_query_result = db_user_tools.return_user(test_username)
+        correct_result = None
+
+        self.assertEqual(test_query_result, correct_result)

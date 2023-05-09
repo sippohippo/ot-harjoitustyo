@@ -29,8 +29,7 @@ test_exercise2 = Exercise(
 test_username = "McTest"
 test_password = "1234"
 
-
-class TestExerciseServices(unittest.TestCase):
+class TestUserServices(unittest.TestCase):
     def setUp(self):
         database_setup()
         db_user_tools.add_user(test_username, test_password)
@@ -39,7 +38,10 @@ class TestExerciseServices(unittest.TestCase):
         self._UserService = user_service
         self._UserService.user = RegularUser(test_username, test_password)
 
-    def test_create_exercise_works(self):
-        return_value = self._ExerciseService.create_exercise(
-            "Barbell Curl", 1, 10, 25.0, "12-12-12")
+    def test_login_correct_credentials_works(self):
+        return_value = self._UserService.login("McTest", "1234")
         self.assertEqual(return_value, True)
+
+    def test_login_wrong_credentials_works(self):
+        return_value = self._UserService.login("McTest", "Wrong_password")
+        self.assertEqual(return_value, False)
