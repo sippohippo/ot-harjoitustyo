@@ -6,7 +6,7 @@ The structure of the program follows the architecture laid out in the package di
 
 ![Package diagram](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/packagediagram_v3.png)
 
-The UI package is self explanatory as it contains the script that houses the user interface. The services package contains the main programming logic, which is divided into two separate areas. Lastly, the entities package houses the main classes that are created, manipulated and stored: users and exercises. Left outside of the packages is the main script that executes the program, as well as three helper scripts that contains the initialization of the database and tools for accessing the databases user and exercises tables.
+The UI package is self explanatory as it contains the script that houses the user interface. The services package contains the main application logic, which is divided into two separate areas. Lastly, the entities package houses the main classes that are created, manipulated and stored: users and exercises. Left outside of the packages is the main script that executes the program, as well as three helper scripts that contains the initialization of the database and tools for accessing the databases user and exercises tables.
 
 ## User interface (UI)
 
@@ -27,7 +27,7 @@ In addition, there are smaller submenus where some inputs are given:
 
 ## Application logic
 
-The main two classes of the app are RegularUser that represent the users who record exercises and Exercise, which represents the completed exercises during a visit to the gym.
+The main two classes of the app are `RegularUser` that represent the users who record exercises and `Exercise`, which represents the completed exercises during a visit to the gym.
 
 ```mermaid
  classDiagram
@@ -54,7 +54,7 @@ The main two classes of the app are RegularUser that represent the users who rec
 
 ```
 
-The application logic is housed in the services package and more specifically the `ExerciseService` and `UserService` classes. These classes are controlled by inputs given through the UI and provide methods for interacting with the database indirectly through the `DatabaseUserTools` and `DatabaseExerciseTools` class.
+The application logic is housed in the services package and more specifically the `ExerciseService` and `UserService` classes. These classes are controlled by inputs given through the UI and provide methods for interacting with the database indirectly through the `DatabaseUserTools` and `DatabaseExerciseTools` classes.
 
 ## Sequence diagrams of different functionalities
 
