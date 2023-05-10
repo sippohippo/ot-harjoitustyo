@@ -39,6 +39,6 @@
 | 9.5.2023  | 0.5              | Adding tabulate library and updating ui    |
 | 9.5.2023  | 2                | Updating and extending documentation       |
 | 10.5.2023 | 1.5              | Updating UI and adding input validation    |
-| 10.5.2023 | 1.5              | Updating and extending documentation       |
+| 10.5.2023 | 2                | Updating and extending documentation       |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 49.0             |                                            |
+| **Total** | 49.5             |                                            |
