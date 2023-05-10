@@ -2,6 +2,7 @@ from services.exercise_service import exercise_service
 from services.user_service import user_service
 from entities.regular_user import RegularUser
 from tabulate import tabulate
+import re
 
 
 class GymApplication:
@@ -12,7 +13,7 @@ class GymApplication:
         self._UserService = user_service
         self._NotLoggedIn = True
 
-    def login_instructions(self):
+    def _login_instructions(self):
         """Used to print the login instructions."""
 
         print("Please select one by entering the number:")
@@ -20,7 +21,7 @@ class GymApplication:
         print("2 create new user")
         print("3 quit")
 
-    def main_interface_instructions(self):
+    def _main_interface_instructions(self):
         """Used to print the main interface instructions."""
 
         print("")
@@ -32,7 +33,7 @@ class GymApplication:
         print("3 remove profile")
         print("4 log out")
 
-    def exercise_viewing_instructions(self):
+    def _exercise_viewing_instructions(self):
         """Used to print the exervice viewing menu's instructions."""
 
         print("")
@@ -45,7 +46,7 @@ class GymApplication:
         print("4 remove an exercise")
         print("5 back to main menu")
 
-    def add_exercise_instructions(self):
+    def _add_exercise_instructions(self):
         """Used to print the exercise adding menu's instructions."""
 
         print("")
@@ -65,18 +66,18 @@ class GymApplication:
             print(32*"-")
 
             if self._NotLoggedIn:
-                if self.login_ui() == False:
+                if self._login_ui() == False:
                     break
             else:
-                self.main_ui()
+                self._main_ui()
 
     # UIs
 
-    def login_ui(self):
+    def _login_ui(self):
         """The login menu UI logic."""
 
         print("")
-        self.login_instructions()
+        self._login_instructions()
         print("")
         command = input("Command: ")
 
@@ -89,11 +90,11 @@ class GymApplication:
         else:
             print("Invalind input")
 
-    def main_ui(self):
+    def _main_ui(self):
         """The main menu UI logic."""
 
         print("")
-        self.main_interface_instructions()
+        self._main_interface_instructions()
         print("")
         command = input("Command: ")
 
@@ -201,12 +202,28 @@ class GymApplication:
     def _add_exercise(self):
         """Adding exercises logic and UI."""
 
-        self.add_exercise_instructions()
+        self._add_exercise_instructions()
         exercise_type = input("Exercise name: ")
-        set_number = input("Set number: ")
-        repetitions = input("Number of repeats: ")
-        weight = input("Weight (kg): ")
-        date = input("Date of exercise (DD-MM-YY) format: ")
+
+        while True:
+            set_number = input("Set number: ")
+            if self._check_type_of_input(set_number, int):
+                break
+
+        while True:
+            repetitions = input("Number of repeats: ")
+            if self._check_type_of_input(repetitions, int):
+                break
+
+        while True:
+            weight = input("Weight (kg): ")
+            if self._check_type_of_input(weight, float):
+                break
+
+        while True:
+            date = input("Date of exercise (DD-MM-YY) format: ")
+            if self._check_date_format(date):
+                break
 
         added_succesfully = exercise_service.create_exercise(
             exercise_type,
@@ -229,7 +246,7 @@ class GymApplication:
         """Logic for exercise viewing menu."""
 
         while True:
-            self.exercise_viewing_instructions()
+            self._exercise_viewing_instructions()
             print("")
             command = str(input("Command: "))
             if command == str(5):
@@ -299,3 +316,25 @@ class GymApplication:
         exercise_id = input("Exercise-ID: ")
         self._ExerciseService.delete_exercise(exercise_id)
         print("")
+
+    def _check_type_of_input(self, input_value, wanted_type):
+        """Checks that an input value is of the correct type."""
+
+        try:
+            if isinstance(wanted_type(input_value), wanted_type):
+                return True
+        except ValueError:
+            print("Please use the correct type of input")
+            return False
+
+    def _check_date_format(self, date):
+        """Checks that a date is in the correct format."""
+
+        correct_format = r'^\d{2}-\d{2}-\d{2}$'
+        
+        if re.match(correct_format, date):
+            return True
+        else:
+            print("Please follow the suggested date format (DD-MM-YY)")
+            return False        
+

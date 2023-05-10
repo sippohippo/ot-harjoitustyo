@@ -22,10 +22,16 @@ Further integration testing was done manually, as no automatic tests were made f
 
 ## System testing
 
-The program has been manually tested on both macOS (ver 13.3.1 (22E261)) and Linux (Cubbli-Linux). Testing was done both by using the releases as well as by cloning the most recent version of the repository.
+The program has been manually tested on both macOS (ver 13.3.1 22E261) and Linux (Cubbli-Linux). Testing was done both by using the releases as well as by cloning the most recent version of the repository.
+
+In the manual tests all major features were tested that they work as intended and most common attempts to type something wrong will not crash the program or cause bugs. This includes checking that the UI works as intended on both macOS and Linux terminals. Note that this application has not been tested in a Windows operating system and may not function even when e.g. using Windows Subsystem for Linux (WSL).
 
 ## Coverage
 
 
 ## Known bugs
+
+- Running the tests reinitializes the database. This means any data saved in it will be lost. Thus the intended end user of this program should not be running the tests after starting to use the program to record exercises.
+
+- There is no strict enforcing of types in the database. When editing exercises it is possible to input weird values into some of the variables. However, when adding new exercises it is not possible to input wrong values.
 

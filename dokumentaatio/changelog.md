@@ -46,4 +46,7 @@
 - Separated the ExerciseService class into two separate classes: ExerciseService and UserService
 - Separated the DatabaseTools class into two separate classes: DatabaseExerciseTools and DatabaseUserTools
 - Updated tests to match the new divided classes
+- Updated documentation to match new classes
 - Added tabulate library to print the exercises more elegantly in the UI
+- Testing doc added
+- Added validation of inputs when adding exercises
