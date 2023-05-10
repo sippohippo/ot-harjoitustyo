@@ -50,3 +50,4 @@
 - Added tabulate library to print the exercises more elegantly in the UI
 - Testing doc added
 - Added validation of inputs when adding exercises
+- Architecture description updated and new diagrams added

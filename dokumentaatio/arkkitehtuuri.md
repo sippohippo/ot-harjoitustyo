@@ -72,13 +72,17 @@ sequenceDiagram
     RegularUser->>UI: Type name and press enter
     UI->>+RegularUser: input("Set number: ")
     RegularUser->>UI: Type a number and press enter
+    UI->>+UI: self._check_type_of_input(set_number, int)
     UI->>+RegularUser: input("Number of repeats: ")
     RegularUser->>UI: Type a number and press enter
+    UI->>+UI: self._check_type_of_input(repetitions, int)
     UI->>+RegularUser: input("Weight (kg): ")
     RegularUser->>UI: Type a number and press enter
+    UI->>+UI: self._check_type_of_input(weight, float)
     UI->>+RegularUser: input("Date of exercise (DD-MM-YY) format: ")
-    RegularUser->>UI: Type a date and press enter    
-    
+    RegularUser->>UI: Type a date and press enter
+    UI->>+UI: self._check_date_format(date)
+
     UI->>ExerciseService: exercise_service.create_exercise(...)
     ExerciseService->>DatabaseExerciseTools: add_exercise(exercise)
 
@@ -87,6 +91,9 @@ sequenceDiagram
 
     UI->>+UI: print("Exercise added")
 ```
+
+The UI asks the user to provide the different values that are stored for the exercise, checking that the right format and type is used. This is then transferred to application logic using the `ExerciseService` class where the method create_exercise(...) is used, with the parameters being the recently asked input values. This create_exercise(...) then uses the add_exercise method from the `DatabaseExerciseTools` class to add the exercise into the program's database. When this is done successfully, both methods return True and then the UI informs the user that the exercise has been added.
+
 
 ### Adding a new user
 
@@ -115,6 +122,8 @@ sequenceDiagram
     UI->>+UI: print("New user created")
 ```
 
+The UI asks the user to provide a username and checks that it is at least 4 characters long. Then it asks the user to provide a password and to repeat it, checking that the length is at least 4 characters and that the password and repeat match. Once these conditions are met, the UI uses the `UserService` class and its new_user(...) method with the username and password as parameters. This in turn calls the add_user method of the `DatabaseUserTools` class to enter the new user to the program's database. These then return True one after another assuming the adding of the user was successful and finally the UI informs the user of the account having been created.
+
 ### Logging in
 
 When the user has selected to log in to an existing account in the starting menu the following happens in the application logic:
@@ -138,6 +147,8 @@ sequenceDiagram
     UI->>+UI: self._NotLoggedIn = False
 
 ```
+
+The UI calls its own method check_username_and_password() which in turn prompts the user to their username and password. Then, the UI uses the `UserService` class and its login() method giving the username and password as parameters. Then, `UserService` uses the `DatabaseUserTools` class and its method return_user to get from the database the username and password storing it as a tuple to "credentials", which is then compared to the username and password provided by the user. If they match, in `UserService` the user variable is set to RegularUser(username, password) and then `UserService` returns the value True to the UI. Then the UI sets its variable NotLoggedIn to False.
 
 ## Data storage
 
