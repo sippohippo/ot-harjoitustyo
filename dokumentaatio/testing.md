@@ -26,7 +26,9 @@ The program has been manually tested on both macOS (ver 13.3.1 22E261) and Linux
 
 In the manual tests all major features were tested that they work as intended and most common attempts to type something wrong will not crash the program or cause bugs. This includes checking that the UI works as intended on both macOS and Linux terminals. Note that this application has not been tested in a Windows operating system and may not function even when e.g. using Windows Subsystem for Linux (WSL).
 
-## Coverage
+## Coverage report
+
+![Coverage report](https://github.com/sippohippo/ot-harjoitustyo/blob/master/dokumentaatio/final_coverage.png)
 
 
 ## Known bugs
