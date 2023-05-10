@@ -90,13 +90,54 @@ sequenceDiagram
 
 ### Adding a new user
 
-To be added...
+When the user has chosen to create a new user from the starting menu the following happens in the application logic:
 
+```mermaid
+sequenceDiagram
+    Actor RegularUser
+
+    UI->>RegularUser: input("Username: ")
+    RegularUser->>UI: Type a name and press enter
+    UI->>+UI: len(username) >= 4:
+    UI->>+RegularUser: input("Password: ")
+    RegularUser->>UI: Type a password and press enter
+    UI->>+RegularUser: input("Please repeat the password: ")
+    RegularUser->>UI: Repeat the previous password and press enter
+    UI->>+UI: len(password) >= 4:
+    UI->>+UI: password == password_repeat:
+    
+    UI->>UserService: user_service.new_user(username, password)
+    UserService->>DatabaseUserTools: add_user(username, password)
+
+    DatabaseUserTools-->>UserService: True
+    UserService-->>UI: True
+
+    UI->>+UI: print("New user created")
+```
 
 ### Logging in
 
-To be added...
+When the user has selected to log in to an existing account in the starting menu the following happens in the application logic:
 
+```mermaid
+
+sequenceDiagram
+    Actor RegularUser
+
+    UI->>+UI: self._check_username_and_password()
+    UI->>RegularUser: input("Username: ")
+    RegularUser->>UI: Type the username and press enter
+    UI->>+RegularUser: input("Password: ")
+    RegularUser->>UI: Type the password and press enter
+    UI->>UserService: user_service.login(username, password)
+    UserService->>DatabaseUserTools: return_user(username)
+    DatabaseUserTools-->>UserService: credentials
+    UserService->>UserService: credentials == (username, password)
+    UserService->>UserService: user = RegularUser(username, password)
+    UserService-->>UI: True
+    UI->>+UI: self._NotLoggedIn = False
+
+```
 
 ## Data storage
 
