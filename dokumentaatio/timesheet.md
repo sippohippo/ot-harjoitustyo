@@ -40,5 +40,6 @@
 | 9.5.2023  | 2                | Updating and extending documentation       |
 | 10.5.2023 | 1.5              | Updating UI and adding input validation    |
 | 10.5.2023 | 2                | Updating and extending documentation       |
+| 11.5.2023 | 2                | Final testing, small update to docs        |
 |-----------|------------------|--------------------------------------------|
-| **Total** | 49.5             |                                            |
+| **Total** | 51.5             |                                            |
