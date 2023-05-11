@@ -30,28 +30,35 @@ In addition, there are smaller submenus where some inputs are given:
 The main two classes of the app are `RegularUser` that represent the users who record exercises and `Exercise`, which represents the completed exercises during a visit to the gym.
 
 ```mermaid
- classDiagram
-      Exercise "*" --> "1" RegularUser
-      ExerciseService ..> RegularUser
-      ExerciseService ..> Exercise
-     
-      class RegularUser{
-          username
-          password
-      }
-      class Exercise{
-          
-          exercise_type
-          set_number
-          repetitions
-          weight
-          date_of_exercise
-          user
-          id
-      }
-    class ExerciseService{
-       }       
+classDiagram
+    Exercise "*" --> "1" RegularUser
 
+    ExerciseService --> DatabaseExerciseTools
+    UserService --> DatabaseUserTools
+    ExerciseService --> UserService
+
+    DatabaseUserTools --> RegularUser
+    DatabaseExerciseTools --> Exercise
+
+    ExerciseService ..> Exercise
+    UserService ..> RegularUser
+     
+    class RegularUser{
+        username
+        password
+    }
+    class Exercise{
+          
+        exercise_type
+        set_number
+        repetitions
+        weight
+        date_of_exercise
+        user
+        id
+    }
+    class ExerciseService{
+    }   
 ```
 
 The application logic is housed in the services package and more specifically the `ExerciseService` and `UserService` classes. These classes are controlled by inputs given through the UI and provide methods for interacting with the database indirectly through the `DatabaseUserTools` and `DatabaseExerciseTools` classes.

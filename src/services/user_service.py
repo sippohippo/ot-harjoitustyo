@@ -18,7 +18,7 @@ class UserService:
         """
 
     def login(self, username, password):
-        """Sets the ExerciseService's user attribute's value to the user logging in and logs in.
+        """Sets the UserService's user attribute's value to the user logging in and logs in.
 
         Args:
             username: String, the username of the user logging in.
