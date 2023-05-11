@@ -277,7 +277,7 @@ class GymApplication:
         print("")
         print("Please provide the date in DD-MM-YY")
         while True:
-            date = input("Date of exercise (DD-MM-YY) format: ")
+            date = input("Date: ")
             if self._check_date_format(date):
                 break
         print("")
