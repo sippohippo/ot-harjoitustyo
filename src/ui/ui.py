@@ -276,7 +276,10 @@ class GymApplication:
 
         print("")
         print("Please provide the date in DD-MM-YY")
-        date = input("Date: ")
+        while True:
+            date = input("Date of exercise (DD-MM-YY) format: ")
+            if self._check_date_format(date):
+                break
         print("")
         exercises = self._ExerciseService.get_exercises_by_date(date)
         print(tabulate(exercises, headers=[
