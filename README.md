@@ -1,4 +1,6 @@
 
+> **Note (Feb 2026):** Claude Code was used to add a tkinter GUI to this app. The repository has not been tested to be fully functional after this addition. Assume slop until proven otherwise.
+
 # Gym Training App (Ohjelmistotekniikka-repo)
 
 The primary purpose of this app is to allow a user to record what exercises they have done at a gym and to track how they have developed overtime in terms of the weights and repetitions. No ads, no unnecessary features, just a pure elegant and functional gym diary. 

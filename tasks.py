@@ -43,3 +43,9 @@ def lint(ctx):
 @task
 def build(ctx):
 	ctx.run("python3 src/database.py")
+
+# Launch the GUI
+
+@task
+def gui(ctx):
+	ctx.run("/opt/anaconda3/bin/python3.13 src/main_gui.py", pty=True)
